@@ -2,13 +2,13 @@
 
 const Homey = require('homey');
 
-class MyDriver extends Homey.Driver {
+class MagnetDriver extends Homey.Driver {
 
     onPairListDevices( data, callback ){
 
         callback( null, [
             {
-                name: 'Foo Device',
+                name: 'Telldus magnet sensor',
                 data: {
                     id: 'foo'
                 }
@@ -19,4 +19,4 @@ class MyDriver extends Homey.Driver {
 
 }
 
-module.exports = MyDriver;
+module.exports = MagnetDriver;
