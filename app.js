@@ -2,14 +2,14 @@
 
 const Homey = require('homey');
 
-class MyApp extends Homey.App {
+class telldusApp extends Homey.App {
 	
 	onInit() {
 		
-		this.log('MyApp is running...');
+		this.log('${Homey.manifest.id} is running...');
 		
 	}
 	
 }
 
-module.exports = MyApp;
+module.exports = telldusApp;

@@ -14,4 +14,21 @@
         "name": "Yngve Bøe Haugom",
         "email": "yngve_haugom@hotmail.com"
     }
+    "images": {
+        "large": "/assets/images/large.png",
+        "small": "/assets/images/small.png"
+    },
+    "drivers": [
+        {
+            "id": "311913",
+            "class": "sensor",
+            "capabilities": "alarm_contact",
+            "name": {
+                "en": "Z-wave door/window sensor"
+            },
+            "images": {
+                "large": "/drivers/311913/assets/images/large.png",
+                "small": "/drivers/311913/assets/images/small.png"
+            }
+        }
 }
