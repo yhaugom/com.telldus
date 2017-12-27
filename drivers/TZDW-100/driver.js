@@ -18,14 +18,6 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 				command_report: 'BASIC_SET',
 				command_report_parser: report => report.Value === 255,
 			},
-		],
-		},
-	},
-
-	settings: {
-		Enable_External_Switch: {
-			index: 1,
-			size: 1,
-		}
-	},
-});
+		]
+	}
+};
