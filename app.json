@@ -69,7 +69,7 @@
 			      	}
 				}
 			},
-				"settings": [
+			"settings": [
 				{
 					"id": 1,
 					"type": "dropdown",
