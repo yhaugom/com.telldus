@@ -13,7 +13,7 @@
     "author": {
         "name": "Yngve Bøe Haugom",
         "email": "yngve_haugom@hotmail.com"
-    }
+    },
     "images": {
         "large": "/assets/images/large.png",
         "small": "/assets/images/small.png"
@@ -25,7 +25,7 @@
 				"en": "Door/window sensor"
 			},
 			"class": "sensor",
-			"capabilities": "alarm_contact",
+			"capabilities": ["alarm_contact"],
 			
 			"images": {
 			    "large": "/drivers/TZDW-100/assets/images/large.png",
@@ -73,7 +73,7 @@
 				{
 					"id": 1,
 					"type": "dropdown",
-					"value": 0,
+					"value": "0",
 					"label": {
 						"en": "Command sent to association group 2"
 					},
@@ -82,43 +82,47 @@
 					},
 					"values": [
 						{
-                            "id": 0,
+                            "id": "0",
                             "label": {
                                 "en": "Basic"
                             }
                         },
 						{
-                            "id": 1,
+                            "id": "1",
                             "label": {
                                 "en": "Switch Binary"
                             }
                         },
                         {
-                            "id": 2,
+                            "id": "2",
                             "label": {
                                 "en": "Switch All"
                             }
                         },
                         {
-                            "id": 3,
+                            "id": "3",
                             "label": {
                                 "en": "Switch Multilevel"
                             }
                         }
-                    ]
+                    ],
 					"_size": 1
 				},
 				{
 					"id": 2,
-					"value": -1,
+                    "type": "number",
 					"label": {
-						"en": "Select value that should be sent to association group 2"
+                    	"en": "Select value that should be sent to association group 2"
 					},
 					"hint": {
 						"en": "Select what value that should be sent to association group 2 when Swith Multilevel is set in configuration 1.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Swith Multilevel is set in configuration 1."
 					},
-					"_size": 1,
-					"type": "checkbox"
+					"value": -1,
+					"attr": {
+						"min": 1,
+						"max": 99
+					},
+					"_size": 1
 				},
 				{
 					"id": 3,
@@ -193,6 +197,6 @@
 					"type": "checkbox"
 				}
 			]
-    	} //closing tag for drivers
+    	} 
     ]
 }
