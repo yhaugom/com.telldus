@@ -5,7 +5,7 @@
         "en": "Telldus"
     },
     "description": {
-        "en": "Adds support for Telldus Z-wave magnet switch."
+        "en": "Adds support for Telldus Z-wave devices"
     },
     "category": "appliances",
     "version": "1.0.0",
@@ -13,6 +13,22 @@
     "author": {
         "name": "Yngve Bøe Haugom",
         "email": "yngve_haugom@hotmail.com"
+    },
+    "contributing": {
+	    "donate": {
+    		"paypal": {
+	        	"username": "YHaugom",
+				"currency": "NOK"
+      		}
+    	}
+  	},
+     "contributors": {
+        "developers": [
+            {
+	            "name": "Michael Medin",
+                "email": "michael@medin.name"
+            }
+        ]
     },
     "images": {
         "large": "/assets/images/large.png",
@@ -29,6 +45,9 @@
 			"images": {
 				"large": "/drivers/TZDW-100/assets/images/large.png",
 				"small": "/drivers/TZDW-100/assets/images/small.png"
+			},
+			"tags": {
+				"en": [ "door sensor", "window sensor", "magnet sensor", "contact alarm" ]
 			},
 			"pair": [
 				{
