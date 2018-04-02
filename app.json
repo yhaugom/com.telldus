@@ -17,8 +17,7 @@
     "contributing": {
 	    "donate": {
     		"paypal": {
-	        	"username": "YHaugom",
-				"currency": "NOK"
+	        	"username": "YHaugom"
       		}
     	}
   	},
@@ -29,6 +28,9 @@
                 "email": "michael@medin.name"
             }
         ]
+    },
+    "bugs":{
+		  "url": "https://github.com/yhaugom/com.telldus/issues"  
     },
     "images": {
         "large": "/assets/images/large.png",
@@ -265,58 +267,101 @@
 					}
 			]
     	},
-     {
-      "id": "TZWP-100",
-      "name": {
-        "en": "Plug-in Switch (Schuko)"
-      },
-      "class": "socket",
-      "capabilities": [
-        "onoff",
-        "meter_power",
-        "measure_power",
-        "measure_current",
-        "measure_voltage"
-      ],
-      "images": {
-        "large": "/drivers/TZWP-100/assets/images/large.png",
-        "small": "/drivers/TZWP-100/assets/images/small.png"
-      },
-      "zwave": {
-        "manufacturerId": [374],
-        "productTypeId": [3],
-        "productId": [1],
-        "wakeUpInterval": 21600,
-        "learnmode": {
-          "image": "/drivers/TZWP-100/assets/learnmode.svg",
-          "instruction": {
-            "en": "..."
-          }
-        },
-        "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1536/manual.pdf",
-        "zwaveAllianceProductId": 1536,
-        "imageRemotePath": "http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-15115002",
-        "associationGroups": [1, 2],
-        "associationGroupsOptions": {
-          "1": {
-            "hint": {
-              "en": "Z-Wave Plus Lifeline"
-            }
-          },
-          "2": {
-            "hint": {
-              "en": "The plug will send Basic Set control signals to the nodes in this group whenever the status of the plug changes. This will work like a master/slave solution."
-            }
-          }
-        },
-        "unlearnmode": {
-          "instruction": {
-            "en": "..."
-          }
-        }
-      },
-      "settings": [
-      ]
-    }
-    ]
+		{
+			"id": "TZWP-100",
+			"name": {
+				"en": "Plug-in Switch (Schuko)"
+				},
+			"class": "socket",
+			"capabilities": [
+				"onoff"
+			],
+			"images": {
+				"large": "/drivers/TZWP-100/assets/images/large.png",
+				"small": "/drivers/TZWP-100/assets/images/small.png"
+				},
+			"zwave":{  
+				"manufacturerId":[374],
+		        "productTypeId":[3],
+		        "productId":[1],
+		        "learnmode":{  
+		            "image":"/drivers/TZWP-100/assets/learnmode.svg",
+		            "instruction":{  
+		                "en":"Automatically add device to network\nWhen the device is inserted into an electrical outlet it’s in automatical add mode for four minutes (Network Wide Inclusion, NWI). This means that the device is added automatically when the Z-wave controller enters add mode.\nManually add device to network\nStart the add mode on the Z-wave controller. Press the button on the device three times fast.The device will now be added into the Z-wave network\nWhen the device is not added to any Z-wave network, the LED will flash red slowly."
+		            }
+		        },
+		        "productDocumentation":"https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1536/manual.pdf",
+		        "zwaveAllianceProductId":1536,
+		        "imageRemotePath":"http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-15115002",
+		        "associationGroups":[1,2],
+		        "associationGroupsOptions":{  
+		            "1":{  
+		                "hint":{  
+		                    "en":"Z-Wave Plus Lifeline - Plug status - Max 1 node"
+		                }
+		            },
+		            "2":{  
+		                "hint":{  
+		                    "en":"The plug will send Basic Set control signals to the nodes in this group whenever the status of the plug changes. This will work like a master/slave solution. Maximum 10 nodes."
+		                }
+		            }
+		        },
+		        "unlearnmode":{  
+		            "instruction":{  
+		                "en":"Select 'Remove a device' from Homey settings under 'Z-wave'. Press the button on the device three times fast. The device will now be removed from the Z­-wave network"
+		            }
+		        }
+		    },
+			"settings": [
+				{
+					"id": 1,
+					"type": "number",
+					"value": 0,
+					"attr": {
+						"min": 0,
+						"max": 254
+					},
+					"_size": 1,
+					"label": {
+						"en": "Countdown timer."
+					},
+					"hint": {
+						"en": "Number of minutes before it automatically­ switches off. Default value: 0 (disabled)."
+					}
+				},
+				{
+					"id": 2,
+					"type": "number",
+					"value": 0,
+					"attr": {
+						"min": 0,
+						"max": 2
+					},
+					"_size": 1,
+					"label": {
+						"en": "Remember device status after power failure"
+					},
+					"hint": {
+						"en": "Define how the plug will react after the power supply is back on. Default value: 1 (remember status).\nPossible values: 0: Always off, 1: Remember status, 2: Always on."
+					}
+				},
+				{
+					"id": 3,
+					"type": "number",
+					"value": 0,
+					"attr": {
+						"min": 0,
+						"max": 100
+					},
+					"_size": 1,
+					"label": {
+						"en": "LED indicator"
+					},
+					"hint": {
+						"en": "Set the intensity of the LED indicator in %. Default value: 100. Possible values: 0­-100"
+					}
+				}
+			]
+    	}
+		]
 }
