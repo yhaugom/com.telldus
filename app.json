@@ -2,7 +2,7 @@
     "id": "com.telldus.xet",
     "sdk": 2,
     "name": {
-        "en": "Telldus"
+        "en": "Telldus.Xet"
     },
     "description": {
         "en": "Adds support for Telldus Z-wave devices"
@@ -60,7 +60,7 @@
 			"zwave":{  
 				"manufacturerId":[374],
 		        "productTypeId":[3],
-		        "productId":[1],
+		        "productId":[3],
 		        "learnmode":{  
 		            "image":"/drivers/TZWP-102/assets/learnmode.svg",
 		            "instruction":{  
@@ -103,7 +103,7 @@
 						"en": "Over current protection."
 					},
 					"hint": {
-						"en": "Over current protection. Default value: 1 (enabled)."
+						"en": "Over current protection.\n0 = Disabled.\n1 = Enabled (default)."
 					}
 				},
 				{
@@ -119,7 +119,7 @@
 						"en": "Setting device status after power failure"
 					},
 					"hint": {
-						"en": "1 ?(remember status).\nPossible values: 0: Always off, 1: Remember status, 2: Always on."
+						"en": "0 = Always off (default).\n1 = Remember status.\n2 = Always on."
 					}
 				},
 				{
@@ -128,7 +128,7 @@
 					"value": 1,
 					"attr": {
 						"min": 0,
-						"max": 3
+						"max": 2
 					},
 					"_size": 1,
 					"label": {
