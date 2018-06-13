@@ -1,5 +1,5 @@
 {
-    "id": "com.telldus",
+    "id": "com.telldus.xet",
     "sdk": 2,
     "name": {
         "en": "Telldus"
@@ -37,255 +37,25 @@
         "small": "/assets/images/small.png"
     },
     "drivers": [
-        {
-			"id": "TZDW-100",
-			"name": {
-				"en": "Door/window sensor"
-			},
-			"class": "sensor",
-			"capabilities": ["alarm_contact","measure_battery"],
-			"images": {
-				"large": "/drivers/TZDW-100/assets/images/large.png",
-				"small": "/drivers/TZDW-100/assets/images/small.png"
-			},
-			"tags": {
-				"en": [ "door sensor", "window sensor", "magnet sensor", "contact alarm" ]
-			},
-			"pair": [
-				{
-                    "id": "list_devices",
-                    "template": "list_devices",
-                    "navigation": {
-                        "next": "add_devices"
-                    },
-                    "options": {
-                        "singular": true
-                    }
-                },
-				{
-                    "id": "add_devices",
-                    "template": "add_devices"
-                }
-			],	
-			"zwave": {
-			    "manufacturerId": [374],
-			    "productTypeId": [5],
-			    "productId": [1],
-			    "wakeUpInterval": 21600,
-			    "learnmode": {
-				    "image": "/drivers/TZDW-100/assets/learnmode.svg",
-					"instruction": {
-					"en": "Automatic inclusion\nWhen a battery is inserted, the device is in automatical add mode for one minute (Network Wide Inclusion, NWI). If so, the device should be added now. If not, see manual inclusion. \n\nManual inclusion\nPress the button on the device three times fast to include the device."
-					}
-			    },
-			    "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1455/Quickguide_Sensor_Switch_107x153mm_PMS.pdf",
-			    "zwaveAllianceProductId": 1455,
-			    "imageRemotePath": "https://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-15100003",
-			    "associationGroups": [1,2,3],
-			    "associationGroupsOptions": {
-			    	"1": {
-						"hint": {
-							"en": "Z-Wave Plus Lifeline"
-			        	}
-			    	},
-					"2": {
-			        	"hint": {
-							"en": "Sensor status\nThe sensor will send control commands to nodes in this group when the status of the sensor changes."
-			        	}
-			      	},
-				  	"3": {
-			        	"hint": {
-							"en": "Sensor status\nThe sensor will send control commands to nodes in this group when the sensor is opened only."
-			        	}
-			      	}
-				},
-				"unlearnmode": {
-					"instruction": {
-					"en": "Start the exclusion mode on the Z-Wave controller.\nPress the button on the device three times fast. The device will now be removed from the Z-Wave-network."
-					}
-				}
-			},
-			"settings": [
-				{
-					"type": "group",
-					"label": {
-						"en": "Association group 2"
-					},
-					"children": [
-						{
-							"id": "1",
-							"type": "dropdown",
-							"value": "0",
-							"label": {
-								"en": "Command sent to association group 2"
-							},
-							"hint": {
-						    	"en": "Select what type of command to be sent to nodes in association group 2. Possible values: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel."
-							},
-							"values": [
-								{
-		                            "id": "0",
-		                            "label": { "en": "Basic" }
-		                        },
-								{
-		                            "id": "1",
-		                            "label": { "en": "Switch Binary" }
-		                        },
-		                        {
-		                            "id": "2",
-		                            "label": { "en": "Switch All" }
-		                        },
-		                        {
-		                            "id": "3",
-		                            "label": { "en": "Switch Multilevel" }
-		                        }
-		                    ],
-							"_size": 1
-						},
-						{
-							"id": "2",
-		                    "type": "number",
-							"label": {
-		                    	"en": "Select value that should be sent to association group 2"
-							},
-							"hint": {
-								"en": "Select what value that should be sent to association group 2 when Swith Multilevel is set in above setting.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Swith Multilevel is set in configuration 1."
-							},
-							"value": -1,
-							"attr": {
-								"min": -1,
-								"max": 99
-							},
-							"_size": 1
-						},
-						{
-							"id": "3",
-							"type": "checkbox",
-							"value": false,
-							"label": {
-								"en": "Invert signals sent to association group 2"
-							},
-							"hint": {
-								"en": "When this configuration is set to inverted, an off-signal will be sent when the sensor is opened and on-signal when it's closed instead of the opposite."
-							},
-							"_size": 1
-						}	
-					]
-				},
-				{	
-					"type": "group",
-					"label": { "en": "Association group 3" },
-					"children": [
-						{
-							"id": "4",
-							"type": "dropdown",
-							"value": "0",
-							"label": { "en": "Command sent to association group 3" },
-							"hint": {
-						    	"en": "Select what type of command to be sent to nodes in association group 2. Possible values: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel."
-							},
-							"values": [
-								{
-		                            "id": "0",
-		                            "label": { "en": "Basic" }
-		                        },
-								{
-		                            "id": "1",
-		                            "label": { "en": "Switch Binary" }
-		                        },
-		                        {
-		                            "id": "2",
-		                            "label": { "en": "Switch All" }
-		                        },
-		                        {
-		                            "id": "3",
-		                            "label": { "en": "Switch Multilevel" }
-		                        }
-		                    ]
-						},
-						{
-							"id": "5",
-							"type": "number",
-							"value": -1,
-							"attr": {
-								"min": -1,
-								"max": 99
-							},
-							"_size": 1,
-							"label": {
-								"en": "Select value that should be sent to association group 3"
-							},
-							"hint": {
-								"en": "Select what value that should be sent to association group 3 when Swith Multilevel is set in above setting.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Swith Multilevel is set in configuration 1."
-							}
-						},
-						{
-							"id": "6",
-							"type": "checkbox",
-							"value": false,
-							"label": {
-								"en": "Invert signals sent to association group 3"
-							},
-							"hint": {
-								"en": "When this configuration is set to inverted, an off-signal will be sent when the sensor is opened and on-signal when it's closed instead of the opposite."
-							},
-							"_size": 1
-						}	
-					]
-				},
-				{
-					"id": "7",
-					"type": "checkbox",
-					"value": true,
-					"label": { "en": "LED-Indicator" },
-					"hint": {
-						"en": "Select if the LED indicator shold be active or not. Turn it off to reduce the power consumption."
-					},
-					"_size": 1
-				},
-				{
-					"id": "8",
-					"type": "dropdown",
-					"value": "0",
-					"values": [
-						{
-							"id": "0",
-							"label": { "en": "Notification" }
-						},
-						{
-							"id": "1",
-							"label": { "en": "Sensor binary" }
-						}
-					],
-					"label": {
-						"en": "Type of command to be sent in the Lifeline"
-					},
-					"hint": {
-						"en": "0 - Notification, 1 - Sensor binary."
-					},
-					"_size": 1
-					}
-			]
-    	},
 		{
-			"id": "TZWP-100",
+			"id": "socket_313510",
 			"name": {
-				"en": "Plug-in Switch (Schuko)"
+				"en": "Plug-in Switch"
 				},
 			"class": "socket",
 			"capabilities": [
 				"onoff"
 			],
 			"images": {
-				"large": "/drivers/TZWP-100/assets/images/large.png",
-				"small": "/drivers/TZWP-100/assets/images/small.png"
+				"large": "/drivers/socket_313510/assets/images/large.png",
+				"small": "/drivers/socket_313510/assets/images/small.png"
 				},
 			"zwave":{  
 				"manufacturerId":[374],
 		        "productTypeId":[3],
 		        "productId":[1],
 		        "learnmode":{  
-		            "image":"/drivers/TZWP-100/assets/learnmode.svg",
+		            "image":"/drivers/socket_313510/assets/learnmode.svg",
 		            "instruction":{  
 		                "en":"Automatically add device to network\nWhen the device is inserted into an electrical outlet it’s in automatical add mode for four minutes (Network Wide Inclusion, NWI). This means that the device is added automatically when the Z-wave controller enters add mode.\nManually add device to network\nStart the add mode on the Z-wave controller. Press the button on the device three times fast.The device will now be added into the Z-wave network\nWhen the device is not added to any Z-wave network, the LED will flash red slowly."
 		            }
