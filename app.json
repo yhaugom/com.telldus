@@ -26,7 +26,12 @@
             {
 	            "name": "Michael Medin",
                 "email": "michael@medin.name"
+			},
+            {
+	            "name": "Tobbe Eriksson",
+                "email": "xet.erixon@gmail.com"
             }
+			
         ]
     },
     "bugs":{
@@ -38,31 +43,33 @@
     },
     "drivers": [
 		{
-			"id": "socket_313510",
+			"id": "TZWP-102",
 			"name": {
 				"en": "Plug-in Switch"
 				},
 			"class": "socket",
 			"capabilities": [
-				"onoff"
+				"onoff",
+				"measure_power",
+				"meter_power"				
 			],
 			"images": {
-				"large": "/drivers/socket_313510/assets/images/large.png",
-				"small": "/drivers/socket_313510/assets/images/small.png"
+				"large": "/drivers/TZWP-102/assets/images/large.png",
+				"small": "/drivers/TZWP-102/assets/images/small.png"
 				},
 			"zwave":{  
 				"manufacturerId":[374],
 		        "productTypeId":[3],
 		        "productId":[1],
 		        "learnmode":{  
-		            "image":"/drivers/socket_313510/assets/learnmode.svg",
+		            "image":"/drivers/TZWP-102/assets/learnmode.svg",
 		            "instruction":{  
 		                "en":"Automatically add device to network\nWhen the device is inserted into an electrical outlet it’s in automatical add mode for four minutes (Network Wide Inclusion, NWI). This means that the device is added automatically when the Z-wave controller enters add mode.\nManually add device to network\nStart the add mode on the Z-wave controller. Press the button on the device three times fast.The device will now be added into the Z-wave network\nWhen the device is not added to any Z-wave network, the LED will flash red slowly."
 		            }
 		        },
-		        "productDocumentation":"https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1536/manual.pdf",
-		        "zwaveAllianceProductId":1536,
-		        "imageRemotePath":"http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-15115002",
+		        "productDocumentation":"https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2892/TZWP-102_technical-manual.pdf",
+		        "zwaveAllianceProductId":2892,
+		        "imageRemotePath":"http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-18036072",
 		        "associationGroups":[1,2],
 		        "associationGroupsOptions":{  
 		            "1":{  
@@ -86,17 +93,17 @@
 				{
 					"id": "1",
 					"type": "number",
-					"value": 0,
+					"value": 1,
 					"attr": {
 						"min": 0,
-						"max": 254
+						"max": 1
 					},
 					"_size": 1,
 					"label": {
-						"en": "Countdown timer."
+						"en": "Over current protection."
 					},
 					"hint": {
-						"en": "Number of minutes before it automatically­ switches off. Default value: 0 (disabled)."
+						"en": "Over current protection. Default value: 1 (enabled)."
 					}
 				},
 				{
@@ -109,28 +116,45 @@
 					},
 					"_size": 1,
 					"label": {
-						"en": "Remember device status after power failure"
+						"en": "Setting device status after power failure"
 					},
 					"hint": {
-						"en": "Define how the plug will react after the power supply is back on. Default value: 1 (remember status).\nPossible values: 0: Always off, 1: Remember status, 2: Always on."
+						"en": "1 ?(remember status).\nPossible values: 0: Always off, 1: Remember status, 2: Always on."
 					}
 				},
 				{
 					"id": "3",
 					"type": "number",
-					"value": 0,
+					"value": 1,
 					"attr": {
 						"min": 0,
-						"max": 100
+						"max": 3
 					},
 					"_size": 1,
 					"label": {
-						"en": "LED indicator"
+						"en": "Notification when Load status change"
 					},
 					"hint": {
-						"en": "Set the intensity of the LED indicator in %. Default value: 100. Possible values: 0­-100"
+						"en": "0 = The function is disabled.\n1 = Send Basic report. (default)\n2 = Send Basic report only when Load status is not changed by Z-WAVE Command."
+					}
+				},
+				{
+					"id": "4",
+					"type": "number",
+					"value": 0,
+					"attr": {
+						"min": 0,
+						"max": 1
+					},
+					"_size": 1,
+					"label": {
+						"en": "LED Load indicator mode selection"
+					},
+					"hint": {
+						"en": "0 = The LED status follows the load change.\n1 = When operating the load, the LED lights for 5 seconds and then turns off."
 					}
 				}
+
 			]
     	}
 		]

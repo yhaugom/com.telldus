@@ -2,7 +2,7 @@
 const Homey = require('homey');
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
-class TelldusSocket313510 extends ZwaveDevice {
+class TelldusTZWP102 extends ZwaveDevice {
 	
 	async onMeshInit() {
 		
@@ -16,4 +16,4 @@ class TelldusSocket313510 extends ZwaveDevice {
 	}
 }
 
-module.exports = TelldusSocket313510;
+module.exports = TelldusTZWP102;
