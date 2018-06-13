@@ -50,8 +50,8 @@
 			"class": "socket",
 			"capabilities": [
 				"onoff",
-				"measure_power",
-				"meter_power"				
+				"meter_power",
+				"measure_power"
 			],
 			"images": {
 				"large": "/drivers/TZWP-102/assets/images/large.png",
@@ -153,7 +153,120 @@
 					"hint": {
 						"en": "0 = The LED status follows the load change.\n1 = When operating the load, the LED lights for 5 seconds and then turns off."
 					}
+				},
+				{
+					"id": "16",
+					"type": "number",
+					"value": 10,
+					"attr": {
+						"min": 0,
+						"max": 65535
+					},
+					"_size": 2,
+					"label": {
+						"en": "Minimum change in wattage"
+					},
+					"hint": {
+						"en": "The value here represents minimum change in wattage (in terms of wattage) for a meter report to be sent"
+					}
+				},
+				{
+					"id": "17",
+					"type": "number",
+					"value": 10,
+					"attr": {
+						"min": -128,
+						"max": 127
+					},
+					"_size": 1,
+					"label": {
+						"en": "Minimum change in wattage percent"
+					},
+					"hint": {
+						"en": "The value here represents minimum change in wattage percent (in terms of percentage) for a meter report (watt) to be sent"
+					}
+				},				
+				{
+					"id": "101",
+					"type": "number",
+					"value": 0,
+					"attr": {
+						"min": 0,
+						"max": 2678400
+					},
+					"_size": 4,
+					"label": {
+						"en": "Setting time for sending meter report (watt)"
+					},
+					"hint": {
+						"en": "TODO"
+					}
+				},
+				{
+					"id": "102",
+					"type": "number",
+					"value": 0,
+					"attr": {
+						"min": 0,
+						"max": 2678400
+					},
+					"_size": 4,
+					"label": {
+						"en": "Setting time for sending meter report (KWh)"
+					},
+					"hint": {
+						"en": "TODO"
+					}
+				},
+				{
+					"id": "103",
+					"type": "number",
+					"value": 0,
+					"attr": {
+						"min": 0,
+						"max": 2678400
+					},
+					"_size": 4,
+					"label": {
+						"en": "Setting time for sending meter report (voltage)"
+					},
+					"hint": {
+						"en": "TODO"
+					}
+				},
+				{
+					"id": "104",
+					"type": "number",
+					"value": 0,
+					"attr": {
+						"min": 0,
+						"max": 2678400
+					},
+					"_size": 4,
+					"label": {
+						"en": "Setting time for sending meter report (current)"
+					},
+					"hint": {
+						"en": "TODO"
+					}
+				},
+				{
+					"id": "254",
+					"type": "number",
+					"value": 0,
+					"attr": {
+						"min": 0,
+						"max": 2678400
+					},
+					"_size": 1,
+					"label": {
+						"en": "Enable/disable the configuration command"
+					},
+					"hint": {
+						"en": "0 = Unlock (default).\n1 = Lock"
+					}
 				}
+
 
 			]
     	}
