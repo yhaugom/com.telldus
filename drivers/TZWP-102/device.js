@@ -5,20 +5,16 @@ const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 class TelldusTZWP102 extends ZwaveDevice {
 	
 	async onMeshInit() {
-		
 		// enable debugging
 		this.enableDebug();
-		
-		// print the node's info to the console
+
+		//print the node's info to the console
 		//this.printNode();
 
 		this.registerCapability('onoff','BASIC');
 		this.registerCapability('onoff','SWITCH_BINARY');
 		this.registerCapability('meter_power','METER');
-		this.registerCapability('measure_power','METER')
-		// this.registerReportListener('METER', 'METER_REPORT', ( rawReport, parsedReport ) => {
-		// 	console.log('registerReportListener', rawReport, parsedReport);
-		// });		
+		this.registerCapability('measure_power','METER');
 	}
 }
 
