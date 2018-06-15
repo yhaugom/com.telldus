@@ -14,4 +14,4 @@
 ### Plug-in Switch Mini
 * Settings does not seem to stick. 
 * Since my graphical skill are slim to none, I used the icons from the assets of the other switch.
-* Inclusion seems to timeout, especially if the plug has to a go via a couple nodes in the mesh. Kepp the plug close to the controller while including it.
+* Inclusion seems to timeout, especially if the plug has to a go via a couple nodes in the mesh. Keep the plug close to the controller while including it.
