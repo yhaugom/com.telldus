@@ -383,7 +383,6 @@
 				"productTypeId":[3],
 				"productId":[3],
 				"learnmode":{  
-					"image":"/drivers/TZWP-102/assets/learnmode.svg",
 					"instruction":{  
 						"en":"Automatically add device to network\nWhen the device is inserted into an electrical outlet it’s in automatical add mode for four minutes (Network Wide Inclusion, NWI). This means that the device is added automatically when the Z-wave controller enters add mode.\nManually add device to network\nStart the add mode on the Z-wave controller. Press the button on the device three times fast.The device will now be added into the Z-wave network\nWhen the device is not added to any Z-wave network, the LED will flash red slowly."
 					}

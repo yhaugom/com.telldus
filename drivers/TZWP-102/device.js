@@ -5,9 +5,8 @@ const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 class TelldusTZWP102 extends ZwaveDevice {
 	
 	async onMeshInit() {
-		// enable debugging
-		this.enableDebug();
-
+		//enable debugging
+		//this.enableDebug();
 		//print the node's info to the console
 		//this.printNode();
 
