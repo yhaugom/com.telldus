@@ -40,6 +40,45 @@
         "large": "/assets/images/large.png",
         "small": "/assets/images/small.png"
     },
+    "flow": {
+    	"triggers": [],
+    	"actions": [],
+    	"conditions": [
+    		{
+    			"id": "current_power",
+    			"title": {
+    				"en": "The current power usage"
+    			},
+    			"args": [
+    				{
+                        "name": "my_device",
+                        "type": "device",
+                        "filter": "driver_id=TZWP-102"
+                    },
+    				{
+    					"name": "W",
+    					"type": "number",
+    					"min": 0,
+    					"max": 2300,
+    					"step": 10,
+    					"placeholder": {
+    						"en": "Set a value in watts"
+    					}
+    				},
+    				{
+    					"name": "errormargin",
+    					"type": "number",
+    					"min": 0,
+    					"max": 100,
+    					"step": 10,
+    					"placeholder": {
+    						"en": "Set error margin in %"
+    					}
+    				}
+    			]
+    		}
+    	]
+    },
     "drivers": [
         {
 			"id": "TZDW-100",
