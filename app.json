@@ -79,7 +79,7 @@
 			    "learnmode": {
 				    "image": "/drivers/TZDW-100/assets/learnmode.svg",
 					"instruction": {
-					"en": "Automatic inclusion\nWhen a battery is inserted, the device is in automatical add mode for one minute (Network Wide Inclusion, NWI). If so, the device should be added now. If not, see manual inclusion. \n\nManual inclusion\nPress the button on the device three times fast to include the device."
+					"en": "Automatic inclusion\nWhen a battery is inserted, the device is in automatic include mode for one minute (Network Wide Inclusion, NWI). If so, the device should be added now. If not, see manual inclusion. \n\nManual inclusion\nPress the button on the device three times fast to include the device."
 					}
 			    },
 			    "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1455/Quickguide_Sensor_Switch_107x153mm_PMS.pdf",
@@ -119,7 +119,7 @@
 						{
 							"id": "1",
 							"type": "dropdown",
-							"value": "0",
+							"value": 0,
 							"label": {
 								"en": "Command sent to association group 2"
 							},
@@ -132,7 +132,7 @@
 		                            "label": { "en": "Basic" }
 		                        },
 								{
-		                            "id": "1",
+		                            "id": "1",	
 		                            "label": { "en": "Switch Binary" }
 		                        },
 		                        {
@@ -178,31 +178,33 @@
 				},
 				{	
 					"type": "group",
-					"label": { "en": "Association group 3" },
+					"label": {
+							"en": "Association group 3"
+						},
 					"children": [
 						{
 							"id": "4",
 							"type": "dropdown",
-							"value": "0",
+							"value": 0,
 							"label": { "en": "Command sent to association group 3" },
 							"hint": {
 						    	"en": "Select what type of command to be sent to nodes in association group 2. Possible values: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel."
 							},
 							"values": [
 								{
-		                            "id": "0",
+		                            "id": 0,
 		                            "label": { "en": "Basic" }
 		                        },
 								{
-		                            "id": "1",
+		                            "id": 1,
 		                            "label": { "en": "Switch Binary" }
 		                        },
 		                        {
-		                            "id": "2",
+		                            "id": 2,
 		                            "label": { "en": "Switch All" }
 		                        },
 		                        {
-		                            "id": "3",
+		                            "id": 3,
 		                            "label": { "en": "Switch Multilevel" }
 		                        }
 		                    ]
@@ -250,7 +252,7 @@
 				{
 					"id": "8",
 					"type": "dropdown",
-					"value": "0",
+					"value": 0,
 					"values": [
 						{
 							"id": "0",
