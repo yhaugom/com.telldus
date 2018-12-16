@@ -7,7 +7,7 @@ class TelldusDoorWindowSensor extends ZwaveDevice {
 	async onMeshInit() {
 		
 		// enable debugging
-		this.enableDebug();
+// 		this.enableDebug();
 		
 		// print the node's info to the console
 		this.printNode();

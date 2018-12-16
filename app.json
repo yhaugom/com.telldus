@@ -112,10 +112,10 @@
 			"settings": [
 				{
 					"type": "group",
+					"collapsed": true,
 					"label": {
 						"en": "Association group 2"
 					},
-					"collapsed": true,
 					"children": [
 						{
 							"id": "command_assoc_group_2",
@@ -275,7 +275,7 @@
 							}
 				},
 				{
-					"id": "",
+					"id": "command_lifeline_type",
 					"type": "dropdown",
 						"label": {
 						"en": "Type of command to be sent in the Lifeline"
