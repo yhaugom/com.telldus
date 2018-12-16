@@ -115,9 +115,10 @@
 					"label": {
 						"en": "Association group 2"
 					},
+					"collapsed": true,
 					"children": [
 						{
-							"id": "1",
+							"id": "command_assoc_group_2",
 							"type": "dropdown",
 							"value": 0,
 							"label": {
@@ -126,6 +127,10 @@
 							"hint": {
 						    	"en": "Select what type of command to be sent to nodes in association group 2. Possible values: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel."
 							},
+							"zwave": {
+								"index": 1,
+								"size": 1
+              				},
 							"values": [
 								{
 		                            "id": "0",
@@ -143,11 +148,10 @@
 		                            "id": "3",
 		                            "label": { "en": "Switch Multilevel" }
 		                        }
-		                    ],
-							"_size": 1
+		                    ]
 						},
 						{
-							"id": "2",
+							"id": "value_assoc_group_2",
 		                    "type": "number",
 							"label": {
 		                    	"en": "Select value that should be sent to association group 2"
@@ -155,15 +159,18 @@
 							"hint": {
 								"en": "Select what value that should be sent to association group 2 when Swith Multilevel is set in above setting.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Swith Multilevel is set in configuration 1."
 							},
+							"zwave": {
+								"index": 2,
+								"size": 1
+							},
 							"value": -1,
 							"attr": {
 								"min": -1,
 								"max": 99
-							},
-							"_size": 1
+							}
 						},
 						{
-							"id": "3",
+							"id": "invert_signal_assoc_group_2",
 							"type": "checkbox",
 							"value": false,
 							"label": {
@@ -172,24 +179,33 @@
 							"hint": {
 								"en": "When this configuration is set to inverted, an off-signal will be sent when the sensor is opened and on-signal when it's closed instead of the opposite."
 							},
-							"_size": 1
+							"zwave": {
+								"index": 3,
+								"size": 1
+							}
 						}	
 					]
 				},
 				{	
 					"type": "group",
+					"collapsed": true,
 					"label": {
 							"en": "Association group 3"
 						},
 					"children": [
 						{
-							"id": "4",
+							"id": "command_assoc_group_3",
 							"type": "dropdown",
-							"value": 0,
 							"label": { "en": "Command sent to association group 3" },
 							"hint": {
 						    	"en": "Select what type of command to be sent to nodes in association group 2. Possible values: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel."
 							},
+							"zwave": {
+								"index": 4,
+								"size": 1,
+								"signed": false
+							},
+							"value": 0,
 							"values": [
 								{
 		                            "id": 0,
@@ -210,48 +226,67 @@
 		                    ]
 						},
 						{
-							"id": "5",
+							"id": "value_assoc_group_3",
 							"type": "number",
 							"value": -1,
 							"attr": {
 								"min": -1,
 								"max": 99
 							},
-							"_size": 1,
 							"label": {
 								"en": "Select value that should be sent to association group 3"
 							},
 							"hint": {
 								"en": "Select what value that should be sent to association group 3 when Swith Multilevel is set in above setting.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Swith Multilevel is set in configuration 1."
+							},
+							"zwave": {
+								"index": 5,
+								"size": 1
 							}
 						},
 						{
-							"id": "6",
+							"id": "invert_signal_assoc_group_3",
 							"type": "checkbox",
-							"value": false,
 							"label": {
 								"en": "Invert signals sent to association group 3"
 							},
 							"hint": {
 								"en": "When this configuration is set to inverted, an off-signal will be sent when the sensor is opened and on-signal when it's closed instead of the opposite."
 							},
-							"_size": 1
+							"zwave": {
+								"index": 6,
+								"size": 1
+							},
+							"value": false
 						}	
 					]
 				},
 				{
-					"id": "7",
+					"id": "led_indicator",
 					"type": "checkbox",
 					"value": true,
 					"label": { "en": "LED-Indicator" },
 					"hint": {
 						"en": "Select if the LED indicator shold be active or not. Turn it off to reduce the power consumption."
 					},
-					"_size": 1
+					"zwave": {
+						"index": 7,
+						"size": 1
+							}
 				},
 				{
-					"id": "8",
+					"id": "",
 					"type": "dropdown",
+						"label": {
+						"en": "Type of command to be sent in the Lifeline"
+					},
+					"hint": {
+						"en": "0 - Notification, 1 - Sensor binary."
+					},
+					"zwave": {
+						"index": 8,
+						"size": 1
+					},
 					"value": 0,
 					"values": [
 						{
@@ -262,15 +297,9 @@
 							"id": "1",
 							"label": { "en": "Sensor binary" }
 						}
-					],
-					"label": {
-						"en": "Type of command to be sent in the Lifeline"
-					},
-					"hint": {
-						"en": "0 - Notification, 1 - Sensor binary."
-					},
-					"_size": 1
-					}
+					]
+				
+				}
 			]
     	},
 		{
@@ -320,14 +349,18 @@
 		    },
 			"settings": [
 				{
-					"id": "1",
+					"id": "countdown_timer",
 					"type": "number",
 					"value": 0,
 					"attr": {
 						"min": 0,
 						"max": 254
 					},
-					"_size": 1,
+					"zwave": {
+						"index": 1,
+						"size": 1,
+						"signed": false
+					},
 					"label": {
 						"en": "Countdown timer."
 					},
@@ -336,14 +369,18 @@
 					}
 				},
 				{
-					"id": "2",
+					"id": "state_after_power_failure",
 					"type": "number",
 					"value": 0,
 					"attr": {
 						"min": 0,
 						"max": 2
 					},
-					"_size": 1,
+					"zwave": {
+						"index": 2,
+						"size": 1,
+						"signed": false
+					},
 					"label": {
 						"en": "Remember device status after power failure"
 					},
@@ -352,14 +389,18 @@
 					}
 				},
 				{
-					"id": "3",
+					"id": "led_indicator",
 					"type": "number",
 					"value": 0,
 					"attr": {
 						"min": 0,
 						"max": 100
 					},
-					"_size": 1,
+					"zwave": {
+						"index": 3,
+						"size": 1,
+						"signed": false
+					},
 					"label": {
 						"en": "LED indicator"
 					},
@@ -413,14 +454,18 @@
 			},
 			"settings": [
 				{
-					"id": "1",
+					"id": "over_current",
 					"type": "number",
 					"value": 1,
 					"attr": {
 						"min": 0,
 						"max": 1
 					},
-					"_size": 1,
+					"zwave": {
+						"index": 1,
+						"size": 1,
+						"signed": false
+					},
 					"label": {
 						"en": "Over current protection."
 					},
@@ -429,14 +474,18 @@
 					}
 				},
 				{
-					"id": "2",
+					"id": "state_after_power_failure",
 					"type": "number",
 					"value": 0,
 					"attr": {
 						"min": 0,
 						"max": 2
 					},
-					"_size": 1,
+					"zwave": {
+						"index": 2,
+						"size": 1,
+						"signed": false
+					},
 					"label": {
 						"en": "Setting device status after power failure"
 					},
@@ -445,14 +494,18 @@
 					}
 				},
 				{
-					"id": "3",
+					"id": "notify_status_change",
 					"type": "number",
 					"value": 1,
 					"attr": {
 						"min": 0,
 						"max": 2
 					},
-					"_size": 1,
+					"zwave": {
+						"index": 3,
+						"size": 1,
+						"signed": false
+					},
 					"label": {
 						"en": "Notification when Load status change"
 					},
@@ -461,14 +514,18 @@
 					}
 				},
 				{
-					"id": "4",
+					"id": "led_status",
 					"type": "number",
 					"value": 0,
 					"attr": {
 						"min": 0,
 						"max": 1
 					},
-					"_size": 1,
+					"zwave": {
+						"index": 4,
+						"size": 1,
+						"signed": false
+					},
 					"label": {
 						"en": "LED Load indicator mode selection"
 					},
@@ -477,14 +534,18 @@
 					}
 				},
 				{
-					"id": "16",
+					"id": "min_watt_change",
 					"type": "number",
 					"value": 10,
 					"attr": {
 						"min": 0,
 						"max": 65535
 					},
-					"_size": 2,
+					"zwave": {
+						"index": 16,
+						"size": 2,
+						"signed": false
+					},
 					"label": {
 						"en": "Minimum change in wattage"
 					},
@@ -493,14 +554,17 @@
 					}
 				},
 				{
-					"id": "17",
+					"id": "min_watt_change_percent",
 					"type": "number",
 					"value": 10,
 					"attr": {
 						"min": -128,
 						"max": 127
 					},
-					"_size": 1,
+					"zwave": {
+						"index": 17,
+						"size": 1
+					},
 					"label": {
 						"en": "Minimum change in wattage percent"
 					},
@@ -509,14 +573,18 @@
 					}
 				},				
 				{
-					"id": "101",
+					"id": "time_meter_report_w",
 					"type": "number",
 					"value": 5,
 					"attr": {
 						"min": 0,
 						"max": 2678400
 					},
-					"_size": 4,
+					"zwave": {
+						"index": 101,
+						"size": 4,
+						"signed": false
+					},
 					"label": {
 						"en": "Setting time for sending meter report (watt)"
 					},
@@ -525,14 +593,18 @@
 					}
 				},
 				{
-					"id": "102",
+					"id": "time_meter_report_kwh",
 					"type": "number",
 					"value": 5,
 					"attr": {
 						"min": 0,
 						"max": 2678400
 					},
-					"_size": 4,
+					"zwave": {
+						"index": 102,
+						"size": 4,
+						"signed": false
+					},
 					"label": {
 						"en": "Setting time for sending meter report (KWh)"
 					},
@@ -541,14 +613,18 @@
 					}
 				},
 				{
-					"id": "103",
+					"id": "time_meter_report_v",
 					"type": "number",
 					"value": 5,
 					"attr": {
 						"min": 0,
 						"max": 2678400
 					},
-					"_size": 4,
+					"zwave": {
+						"index":103 ,
+						"size": 4,
+						"signed": false
+					},
 					"label": {
 						"en": "Setting time for sending meter report (voltage)"
 					},
@@ -557,14 +633,18 @@
 					}
 				},
 				{
-					"id": "104",
+					"id": "time_meter_report_c",
 					"type": "number",
 					"value": 5,
 					"attr": {
 						"min": 0,
 						"max": 2678400
 					},
-					"_size": 4,
+					"zwave": {
+						"index": 104,
+						"size": 4,
+						"signed": false
+					},
 					"label": {
 						"en": "Setting time for sending meter report (current)"
 					},
@@ -580,7 +660,11 @@
 						"min": 0,
 						"max": 1
 					},
-					"_size": 1,
+					"zwave": {
+						"index": 254,
+						"size": 1,
+						"signed": false
+					},
 					"label": {
 						"en": "Enable/disable the configuration command"
 					},
