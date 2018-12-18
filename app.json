@@ -112,15 +112,15 @@
 			"settings": [
 				{
 					"type": "group",
-					"collapsed": true,
 					"label": {
 						"en": "Association group 2"
 					},
+					"collapsed": true,
 					"children": [
 						{
 							"id": "command_assoc_group_2",
 							"type": "dropdown",
-							"value": 0,
+							"value": "0",
 							"label": {
 								"en": "Command sent to association group 2"
 							},
@@ -205,22 +205,22 @@
 								"size": 1,
 								"signed": false
 							},
-							"value": 0,
+							"value": "0",
 							"values": [
 								{
-		                            "id": 0,
+		                            "id": "0",
 		                            "label": { "en": "Basic" }
 		                        },
 								{
-		                            "id": 1,
+		                            "id": "1",
 		                            "label": { "en": "Switch Binary" }
 		                        },
 		                        {
-		                            "id": 2,
+		                            "id": "2",
 		                            "label": { "en": "Switch All" }
 		                        },
 		                        {
-		                            "id": 3,
+		                            "id": "3",
 		                            "label": { "en": "Switch Multilevel" }
 		                        }
 		                    ]
@@ -287,7 +287,7 @@
 						"index": 8,
 						"size": 1
 					},
-					"value": 0,
+					"value": "0",
 					"values": [
 						{
 							"id": "0",
@@ -308,9 +308,7 @@
 				"en": "Plug-in Switch (Schuko)"
 				},
 			"class": "socket",
-			"capabilities": [
-				"onoff"
-			],
+			"capabilities": ["onoff"],
 			"images": {
 				"large": "/drivers/TZWP-100/assets/images/large.png",
 				"small": "/drivers/TZWP-100/assets/images/small.png"
