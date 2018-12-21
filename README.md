@@ -8,7 +8,6 @@
 * [Z-wave Plug-in switch](https://products.z-wavealliance.org/products/2892) - Plug-in Switch Mini (TZWP-102)
 ## Issues
 ### Z-wave Door/window sensor
-* Not fully tested the settings. Need to test battery readings, and if settings works. 
 ### Z-wave Plug-in switch
 * Not tested settings
 ### Plug-in Switch Mini
