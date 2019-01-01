@@ -8,10 +8,10 @@
 * [Z-wave Plug-in switch](https://products.z-wavealliance.org/products/2892) - Plug-in Switch Mini (TZWP-102)
 
 ## Version log
-*1.0.0 - Initial version - support for Door/window sensor
-*1.0.1
-*1.0.2
-*1.0.3 - rewrite to support SDK 2, and new athom-cli. Changed id´s to be strings. Contribution from @ksjoberg - condition - meassured power in range for Telldus TZWP-102 plug.
+* 1.0.0 - Initial version - support for Door/window sensor
+* 1.0.1
+* 1.0.2
+* 1.0.3 - rewrite to support SDK 2, and new athom-cli. Changed id´s to be strings. Contribution from @ksjoberg - condition - meassured power in range for Telldus TZWP-102 plug.
 
 ## Issues
 ### Z-wave Plug-in switch
