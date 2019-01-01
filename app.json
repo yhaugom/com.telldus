@@ -26,11 +26,13 @@
             {
 	            "name": "Michael Medin",
                 "email": "michael@medin.name"
-	    },
+            },
             {
 	            "name": "Tobbe Eriksson",
                 "email": "xet.erixon@gmail.com"
-            },{
+
+            },
+            {
 		    "name": "Kristoffer Sjöberg",
 		    "email": ""
             }
