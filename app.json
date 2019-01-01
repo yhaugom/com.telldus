@@ -8,7 +8,7 @@
         "en": "Adds support for Telldus Z-wave devices"
     },
     "category": "appliances",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "compatibility": ">=1.5.0",
     "author": {
         "name": "Yngve Bøe Haugom",
@@ -26,10 +26,13 @@
             {
 	            "name": "Michael Medin",
                 "email": "michael@medin.name"
-			},
+	    },
             {
 	            "name": "Tobbe Eriksson",
                 "email": "xet.erixon@gmail.com"
+            },{
+		    "name": "Kristoffer Sjöberg",
+		    "email": ""
             }
         ]
     },
