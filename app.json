@@ -166,7 +166,7 @@
 							"type": "dropdown",
 							"value": "0",
 							"label": {
-								"en": "Command sent to association group 2"
+								"en": "Command sent"
 							},
 							"hint": {
 						    	"en": "Select what type of command to be sent to nodes in association group 2. Possible values: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel."
@@ -198,7 +198,7 @@
 							"id": "value_assoc_group_2",
 		                    "type": "number",
 							"label": {
-		                    	"en": "Select value that should be sent to association group 2"
+		                    	"en": "Value sent"
 							},
 							"hint": {
 								"en": "Select what value that should be sent to association group 2 when Swith Multilevel is set in above setting.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Swith Multilevel is set in configuration 1."
@@ -218,7 +218,7 @@
 							"type": "checkbox",
 							"value": false,
 							"label": {
-								"en": "Invert signals sent to association group 2"
+								"en": "Invert signals"
 							},
 							"hint": {
 								"en": "When this configuration is set to inverted, an off-signal will be sent when the sensor is opened and on-signal when it's closed instead of the opposite."
@@ -240,9 +240,9 @@
 						{
 							"id": "command_assoc_group_3",
 							"type": "dropdown",
-							"label": { "en": "Command sent to association group 3" },
+							"label": { "en": "Command sent" },
 							"hint": {
-						    	"en": "Select what type of command to be sent to nodes in association group 2. Possible values: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel."
+						    	"en": "Select what type of command to be sent to nodes in association group 3. Possible values: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel."
 							},
 							"zwave": {
 								"index": 4,
@@ -278,7 +278,7 @@
 								"max": 99
 							},
 							"label": {
-								"en": "Select value that should be sent to association group 3"
+								"en": "Value sent"
 							},
 							"hint": {
 								"en": "Select what value that should be sent to association group 3 when Swith Multilevel is set in above setting.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Swith Multilevel is set in configuration 1."
@@ -292,7 +292,7 @@
 							"id": "invert_signal_assoc_group_3",
 							"type": "checkbox",
 							"label": {
-								"en": "Invert signals sent to association group 3"
+								"en": "Invert signals"
 							},
 							"hint": {
 								"en": "When this configuration is set to inverted, an off-signal will be sent when the sensor is opened and on-signal when it's closed instead of the opposite."
@@ -322,10 +322,10 @@
 					"id": "command_lifeline_type",
 					"type": "dropdown",
 						"label": {
-						"en": "Type of command to be sent in the Lifeline"
+						"en": "Command type"
 					},
 					"hint": {
-						"en": "0 - Notification, 1 - Sensor binary."
+						"en": "Type of command to be sent in the Lifeline. 0 - Notification, 1 - Sensor binary."
 					},
 					"zwave": {
 						"index": 8,
