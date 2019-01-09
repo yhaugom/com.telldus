@@ -13,6 +13,11 @@ class TelldusRemotePlug extends ZwaveDevice {
 		this.printNode();
 
 		this.registerCapability('onoff', 'BASIC');
+		
+		// register a report listener
+		this.registerReportListener('SWITCH_BINARY', 'SWITCH_BINARY_REPORT', ( rawReport, parsedReport ) => {
+			console.log('registerReportListener', rawReport, parsedReport);
+		});
 	}
 }
 
