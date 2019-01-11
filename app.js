@@ -10,7 +10,7 @@ class telldusApp extends Homey.App {
 		currentPowerCondition
 			.register()
 			.registerRunListener(( args, state ) => {
-				var power = args.my_device.getCapabilityValue('measure_power');
+				var power = args.plugin_switch_mini.getCapabilityValue('measure_power');
 				var margin = args.W * args.errormargin / 100;
 
 				if ((power >= args.W - margin) && (power < args.W + margin))

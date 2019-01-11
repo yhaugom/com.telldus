@@ -23,6 +23,10 @@
   	},
      "contributors": {
         "developers": [
+        	{
+	            "name": "Yngve Bøe Haugom",
+                "email": "yngve_haugom@hotmail.com"
+            },
             {
 	            "name": "Michael Medin",
                 "email": "michael@medin.name"
@@ -56,7 +60,7 @@
     			},
     			"args": [
     				{
-                        "name": "my_device",
+                        "name": "plugin_switch_mini",
                         "type": "device",
                         "filter": "driver_id=TZWP-102"
                     },
