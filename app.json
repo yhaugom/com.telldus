@@ -635,7 +635,7 @@
 						"en": "Setting time for sending meter report (watt)"
 					},
 					"hint": {
-						"en": "TODO"
+						"en": "The interval time for sending meter report (watt) to associated device (Group Lifeline). 0 Disabled.\nValid values are 5 - 2678400."
 					}
 				},
 				{
@@ -655,7 +655,7 @@
 						"en": "Setting time for sending meter report (KWh)"
 					},
 					"hint": {
-						"en": "TODO"
+						"en": "The interval time for sending meter report (KWh) to association device (Group Lifeline). 0 - Disabled.\nValid values are 5 - 2678400."
 					}
 				},
 				{
@@ -675,7 +675,7 @@
 						"en": "Setting time for sending meter report (voltage)"
 					},
 					"hint": {
-						"en": "TODO"
+						"en": "The interval time for sending meter report (V) to association device (Group Lifeline). 0 - Disabled.\nValid values are 5 - 2678400."
 					}
 				},
 				{
@@ -695,7 +695,7 @@
 						"en": "Setting time for sending meter report (current)"
 					},
 					"hint": {
-						"en": "TODO"
+						"en": "The interval time for sending meter report (current) to association device (Group Lifeline). 0 - Disabled.\nValid values are 5 - 2678400."
 					}
 				},
 				{
