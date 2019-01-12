@@ -13,9 +13,9 @@
 * 1.0.2 - Added Telldus plug-in mini switch.
 * 1.0.3 - Rewrite to support SDK 2, and new athom-cli. Changed id´s to be strings. Added condition - meassured power in range for Telldus TZWP-102 plug.
 
-## Issues
-### Z-wave Plug-in switch
+## Known issues, or not tested
+###Plug-in switch (Schuko)
 * Not tested settings
-### Plug-in Switch Mini
-* Some settings does not seem to stick. 
-* Inclusion sometimes seem to timeout, especially if the plug has to a go via a couple nodes in the mesh. Keep the plug close to the controller while including it.
+### Plug-in mini switch
+* Some settings does not seem to stick (need help with testing since I don´t have the device myself).
+
