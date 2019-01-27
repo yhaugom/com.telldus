@@ -2,7 +2,7 @@
     "id": "com.telldus",
     "sdk": 2,
     "name": {
-        "en": "Telldus"
+        "en": "Telldus Z-wave"
     },
     "description": {
         "en": "Adds support for Telldus Z-wave devices"
