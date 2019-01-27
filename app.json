@@ -8,7 +8,7 @@
         "en": "Adds support for Telldus Z-wave devices"
     },
     "category": "appliances",
-    "version": "1.0.3",
+    "version": "1.1.0",
     "compatibility": ">=1.5.0",
     "author": {
         "name": "Yngve Bøe Haugom",
@@ -462,7 +462,7 @@
 				"en": "Plug-in Switch Mini"
 				},
 			"class": "socket",
-			"capabilities": ["onoff", "meter_power","measure_power"],
+			"capabilities": ["onoff","meter_power","measure_power"],
 			"images": {
 				"large": "/drivers/TZWP-102/assets/images/large.png",
 				"small": "/drivers/TZWP-102/assets/images/small.png"
