@@ -12,6 +12,8 @@
 * 1.0.1 - Added Plug-in Switch (Schuko) TZWP-100. Bugfix.
 * 1.0.2 - Added Telldus plug-in mini switch.
 * 1.0.3 - Rewrite to support SDK 2, and new athom-cli. Changed id´s to be strings. Added condition - meassured power in range for Telldus TZWP-102 plug.
+* 1.1.0 - Stable version
+* 1.1.1 - Fixed setting hint. Wrong description for TZWP-102 when power failure.
 
 ## Known issues, or not tested
 ###Plug-in switch (Schuko)
