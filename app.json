@@ -8,7 +8,7 @@
         "en": "Adds support for Telldus Z-wave devices"
     },
     "category": "appliances",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "compatibility": ">=1.5.0",
     "author": {
         "name": "Yngve Bøe Haugom",
@@ -417,7 +417,7 @@
 				{
 					"id": "state_after_power_failure",
 					"type": "number",
-					"value": 0,
+					"value": 1,
 					"attr": {
 						"min": 0,
 						"max": 2
@@ -431,7 +431,7 @@
 						"en": "Remember device status after power failure"
 					},
 					"hint": {
-						"en": "Define how the plug will react after the power supply is back on. Default value: 1 (remember status).\nPossible values: 0: Always off, 1: Remember status, 2: Always on."
+						"en": "Define how the plug will react after the power supply is back on.\nPossible values: 0: Always off, 1: Remember status (Default), 2: Always on."
 					}
 				},
 				{
@@ -536,7 +536,7 @@
 						"en": "Setting device status after power failure"
 					},
 					"hint": {
-						"en": "0 = Always off (default).\n1 = Remember status.\n2 = Always on."
+						"en": "0 = Remember status (default).\n1 = Always on.\n2 = Always off."
 					}
 				},
 				{
