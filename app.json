@@ -429,10 +429,10 @@
 						"signed": false
 					},
 					"label": {
-						"en": "Remember device status after power failure"
+						"en": "State after power failure"
 					},
 					"hint": {
-						"en": "Define how the plug will react after the power supply is back on.\nPossible values: 0: Always off, 1: Remember status (Default), 2: Always on."
+						"en": "Decide what the plug should do after power failure. \nPossible values: 0: Always off, 1: Remember status (Default), 2: Always on."
 					}
 				},
 				{
