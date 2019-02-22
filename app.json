@@ -501,6 +501,26 @@
 			},
 			"settings": [
 				{
+					"id": "config_lock",
+					"type": "number",
+					"value": 0,
+					"attr": {
+						"min": 0,
+						"max": 1
+					},
+					"zwave": {
+						"index": 254,
+						"size": 1,
+						"signed": false
+					},
+					"label": {
+						"en": "Configuration lock"
+					},
+					"hint": {
+						"en": "Enable/disable the configuration command. \n0 = Unlocked (default).\n1 = Locked"
+					}
+				},
+				{
 					"id": "over_current",
 					"type": "number",
 					"value": 1,
@@ -514,10 +534,10 @@
 						"signed": false
 					},
 					"label": {
-						"en": "Over current protection."
+						"en": "Overcurrent protection."
 					},
 					"hint": {
-						"en": "Over current protection.\n0 = Disabled.\n1 = Enabled (default)."
+						"en": "Overcurrent protection.\n0 = Disabled.\n1 = Enabled (default)."
 					}
 				},
 				{
@@ -534,10 +554,10 @@
 						"signed": false
 					},
 					"label": {
-						"en": "Setting device status after power failure"
+						"en": "State after power failure"
 					},
 					"hint": {
-						"en": "0 = Remember status (default).\n1 = Always on.\n2 = Always off."
+						"en": "Decide what the plug should do after power failure.\n0 = Remember status (default).\n1 = Always on.\n2 = Always off."
 					}
 				},
 				{
@@ -557,7 +577,7 @@
 						"en": "Notification when load status change"
 					},
 					"hint": {
-						"en": "0 = Disabled.\n1 = Send Basic report. (default)\n2 = Send Basic report only when load status is not changed by Z-WAVE command."
+						"en": "Decide the behaviour for notification when load status is updated. \n0 = Disabled.\n1 = Send Basic report (ON/OFF). (default)\n2 = Send Basic report (ON/OFF) only when load status is not changed by Z-WAVE command."
 					}
 				},
 				{
@@ -574,7 +594,7 @@
 						"signed": false
 					},
 					"label": {
-						"en": "LED Load indicator mode selection"
+						"en": "LED load indication"
 					},
 					"hint": {
 						"en": "0 = The LED status follows the load change.\n1 = When operating the load, the LED lights for 5 seconds and then turns off."
@@ -594,7 +614,7 @@
 						"signed": false
 					},
 					"label": {
-						"en": "Minimum change in wattage"
+						"en": "Wattage report threshold (W)"
 					},
 					"hint": {
 						"en": "The value here represents the minimum change in wattage (W), since the last report, for a new report to be sent."
@@ -613,7 +633,7 @@
 						"size": 1
 					},
 					"label": {
-						"en": "Minimum change in wattage percent"
+						"en": "Wattage report threshold (%)"
 					},
 					"hint": {
 						"en": "The value here represents minimum change in wattage percentage, since the last report, for a meter report (W) to be sent. 0 - Disabled."
@@ -633,10 +653,10 @@
 						"signed": false
 					},
 					"label": {
-						"en": "Setting time for sending power report (watt)"
+						"en": "Power (W) report timeout (s)"
 					},
 					"hint": {
-						"en": "The interval time for sending power report (watt) to associated device (Group Lifeline). 0 Disabled.\nValid values are 5 - 2678400."
+						"en": "The interval time in seconds between sending power report (watt) to Homey. 0 Disabled.\nValid values are 5 - 2678400."
 					}
 				},
 				{
@@ -653,10 +673,10 @@
 						"signed": false
 					},
 					"label": {
-						"en": "Setting time for sending energy report (KWh)"
+						"en": "Energy (KWh) report timeout (s)"
 					},
 					"hint": {
-						"en": "The interval time for sending energy report (KWh) to association device (Group Lifeline). 0 - Disabled.\nValid values are 5 - 2678400."
+						"en": "The interval time in seconsd between sending energy report (KWh) to Homey. 0 - Disabled.\nValid values are 5 - 2678400."
 					}
 				},
 				{
@@ -673,10 +693,10 @@
 						"signed": false
 					},
 					"label": {
-						"en": "Setting time for sending voltage report (V)"
+						"en": "Voltage (V) report timeout (s)"
 					},
 					"hint": {
-						"en": "The interval time for sending voltage report (V) to association device (Group Lifeline). 0 - Disabled.\nValid values are 5 - 2678400."
+						"en": "The interval time in seconds between sending voltage report (V) to Homey. 0 - Disabled.\nValid values are 5 - 2678400."
 					}
 				},
 				{
@@ -693,30 +713,10 @@
 						"signed": false
 					},
 					"label": {
-						"en": "Setting time for sending current report (A)"
+						"en": "Current (A) report timeout (s)"
 					},
 					"hint": {
-						"en": "The interval time for sending current report (A) to association device (Group Lifeline). 0 - Disabled.\nValid values are 5 - 2678400."
-					}
-				},
-				{
-					"id": "254",
-					"type": "number",
-					"value": 0,
-					"attr": {
-						"min": 0,
-						"max": 1
-					},
-					"zwave": {
-						"index": 254,
-						"size": 1,
-						"signed": false
-					},
-					"label": {
-						"en": "Enable/disable the configuration command"
-					},
-					"hint": {
-						"en": "0 = Unlock (default).\n1 = Lock"
+						"en": "The interval time in seconds between sending current report (A) to Homey. 0 - Disabled.\nValid values are 5 - 2678400."
 					}
 				}
 			]
