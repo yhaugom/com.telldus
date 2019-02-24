@@ -206,7 +206,7 @@
 		                    	"en": "Value sent"
 							},
 							"hint": {
-								"en": "Select what value that should be sent to association group 2 when Swith Multilevel is set in above setting.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Swith Multilevel is set in configuration 1."
+								"en": "Select the value to be sent to association group 2 when Swith Multilevel is set in above setting.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Switch Multilevel is set in configuration 1."
 							},
 							"zwave": {
 								"index": 2,
@@ -226,7 +226,7 @@
 								"en": "Invert signals"
 							},
 							"hint": {
-								"en": "When this configuration is set to inverted, an off-signal will be sent when the sensor is opened and on-signal when it's closed instead of the opposite."
+								"en": "When this configuration is set to inverted, an off-signal will be sent when the sensor is opened and on-signal when it's closed."
 							},
 							"zwave": {
 								"index": 3,
@@ -247,7 +247,7 @@
 							"type": "dropdown",
 							"label": { "en": "Command sent" },
 							"hint": {
-						    	"en": "Select what type of command to be sent to nodes in association group 3. Possible values: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel."
+						    	"en": "Select the type of command to be sent to nodes in association group 3. Possible values: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel."
 							},
 							"zwave": {
 								"index": 4,
@@ -286,7 +286,7 @@
 								"en": "Value sent"
 							},
 							"hint": {
-								"en": "Select what value that should be sent to association group 3 when Swith Multilevel is set in above setting.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Swith Multilevel is set in configuration 1."
+								"en": "Select the value to be sent to association group 3 when Swith Multilevel is set in above setting.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Swith Multilevel is set in configuration 1."
 							},
 							"zwave": {
 								"index": 5,
@@ -300,7 +300,7 @@
 								"en": "Invert signals"
 							},
 							"hint": {
-								"en": "When this configuration is set to inverted, an off-signal will be sent when the sensor is opened and on-signal when it's closed instead of the opposite."
+								"en": "When this configuration is set to inverted, an off-signal will be sent when the sensor is opened, and an on-signal when it's closed."
 							},
 							"zwave": {
 								"index": 6,
@@ -676,7 +676,7 @@
 						"en": "Energy (KWh) report timeout (s)"
 					},
 					"hint": {
-						"en": "The interval time in seconsd between sending energy report (KWh) to Homey. 0 - Disabled.\nValid values are 5 - 2678400."
+						"en": "The interval time in seconds between sending energy report (KWh) to Homey. 0 - Disabled.\nValid values are 5 - 2678400."
 					}
 				},
 				{
