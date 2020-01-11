@@ -44,7 +44,7 @@
         ]
     },
     "bugs":{
-		  "url": "https://github.com/yhaugom/com.telldus/issues"  
+		  "url": "https://github.com/yhaugom/com.telldus/issues"
     },
     "images": {
         "large": "/assets/images/large.png",
@@ -52,7 +52,24 @@
     },
     "flow": {
     	"triggers": [],
-    	"actions": [],
+    	"actions": [
+        {
+          "id": "ZWP-102_reset_meter",
+          "title": {
+            "en": "Reset meter values"
+        },
+        "hint": {
+          "en": "Reset the accumulated power usage (KWh). Can not be reversed."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=FGRGBWM-441"
+          }
+        ]
+      }
+      ],
     	"conditions": [
     		{
     			"id": "current_power",
@@ -119,7 +136,7 @@
                     "id": "add_devices",
                     "template": "add_devices"
                 }
-			],	
+			],
 			"zwave": {
 			    "manufacturerId": [374],
 			    "productTypeId": [5],
@@ -186,7 +203,7 @@
 		                            "label": { "en": "Basic" }
 		                        },
 								{
-		                            "id": "1",	
+		                            "id": "1",
 		                            "label": { "en": "Switch Binary" }
 		                        },
 		                        {
@@ -232,10 +249,10 @@
 								"index": 3,
 								"size": 1
 							}
-						}	
+						}
 					]
 				},
-				{	
+				{
 					"type": "group",
 					"collapsed": true,
 					"label": {
@@ -307,7 +324,7 @@
 								"size": 1
 							},
 							"value": false
-						}	
+						}
 					]
 				},
 				{
@@ -347,7 +364,7 @@
 							"label": { "en": "Sensor binary" }
 						}
 					]
-				
+
 				}
 			]
     	},
@@ -362,13 +379,13 @@
 				"large": "/drivers/TZWP-100/assets/images/large.png",
 				"small": "/drivers/TZWP-100/assets/images/small.png"
 				},
-			"zwave":{  
+			"zwave":{
 				"manufacturerId":[374],
 		        "productTypeId":[3],
 		        "productId":[1],
-		        "learnmode":{  
+		        "learnmode":{
 		            "image":"/drivers/TZWP-100/assets/learnmode.svg",
-		            "instruction":{  
+		            "instruction":{
 		                "en":"Automatic inclusion: \nWhen the device is inserted into an electrical outlet, it’s in automatical inclusion mode for four minutes (Network Wide Inclusion, NWI). This means that the device should now be added automatically.\nTo manually add device to network: \n Press the button on the device three times fast. \nIf the device is not added to any Z-wave network, the LED will flash red slowly."
 		            }
 		        },
@@ -376,20 +393,20 @@
 		        "zwaveAllianceProductId":1536,
 		        "imageRemotePath":"http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-15115002",
 		        "associationGroups":[1,2],
-		        "associationGroupsOptions":{  
-		            "1":{  
-		                "hint":{  
+		        "associationGroupsOptions":{
+		            "1":{
+		                "hint":{
 		                    "en":"Z-Wave Plus Lifeline - Plug status - Max 1 node"
 		                }
 		            },
-		            "2":{  
-		                "hint":{  
+		            "2":{
+		                "hint":{
 		                    "en":"The plug will send Basic Set control signals to the nodes in this group whenever the status of the plug changes. This will work like a master/slave solution. Maximum 10 nodes."
 		                }
 		            }
 		        },
-		        "unlearnmode":{  
-		            "instruction":{  
+		        "unlearnmode":{
+		            "instruction":{
 		                "en":"Select 'Remove a device' from Homey settings under 'Z-wave'. Press the button on the device three times fast. The device will now be removed from the Z­-wave network"
 		            }
 		        }
@@ -468,12 +485,12 @@
 				"large": "/drivers/TZWP-102/assets/images/large.png",
 				"small": "/drivers/TZWP-102/assets/images/small.png"
 				},
-			"zwave":{  
+			"zwave":{
 				"manufacturerId":[374],
 				"productTypeId":[3],
 				"productId":[3],
-				"learnmode":{  
-					"instruction":{  
+				"learnmode":{
+					"instruction":{
 						"en":"Automatic inclusion: \nWhen the device is inserted into an electrical outlet it’s in automatical inclusion mode for four minutes (Network Wide Inclusion, NWI). In that case the device should now be added automatically.\nTo manually add device to network: \nPress the button on the device three times fast. \nIf the device is not added to any Z-wave network, the LED will flash red slowly."
 					}
 				},
@@ -481,20 +498,20 @@
 				"zwaveAllianceProductId":2892,
 				"imageRemotePath":"http://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-18036072",
 				"associationGroups":[1,2],
-				"associationGroupsOptions":{  
-					"1":{  
-						"hint":{  
+				"associationGroupsOptions":{
+					"1":{
+						"hint":{
 							"en":"Z-Wave Plus Lifeline - Plug status - Max 1 node"
 						}
 					},
-					"2":{  
-						"hint":{  
+					"2":{
+						"hint":{
 							"en":"The plug will send Basic Set control signals to the nodes in this group whenever the status of the plug changes. This will work like a master/slave solution. Maximum 10 nodes."
 						}
 					}
 				},
-				"unlearnmode":{  
-					"instruction":{  
+				"unlearnmode":{
+					"instruction":{
 						"en":"Select 'Remove a device' from Homey settings under 'Z-wave'. Press the button on the device three times fast. The device will now be removed from the Z­-wave network"
 					}
 				}
@@ -638,7 +655,7 @@
 					"hint": {
 						"en": "The value here represents minimum change in wattage percentage, since the last report, for a meter report (W) to be sent. 0 - Disabled."
 					}
-				},				
+				},
 				{
 					"id": "time_meter_report_w",
 					"type": "number",
@@ -720,6 +737,6 @@
 					}
 				}
 			]
-		}		
+		}
 		]
 }
