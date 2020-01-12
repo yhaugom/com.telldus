@@ -114,6 +114,9 @@
 			},
 			"class": "sensor",
 			"capabilities": ["alarm_contact","measure_battery"],
+			"energy": {
+				"batteries": ["LS14250"]
+			},
 			"images": {
 				"large": "/drivers/TZDW-100/assets/images/large.png",
 				"small": "/drivers/TZDW-100/assets/images/small.png"
