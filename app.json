@@ -495,7 +495,7 @@
 	                  "en": "Reset the accumulated power usage (kWh), note that this can not be reversed."
 	               }
 	            }
-            }
+            },
 			"images": {
 				"large": "/drivers/TZWP-102/assets/images/large.png",
 				"small": "/drivers/TZWP-102/assets/images/small.png"
