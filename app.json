@@ -54,7 +54,7 @@
     	"triggers": [],
     	"actions": [
         {
-          "id": "ZWP-102_reset_meter",
+          "id": "TZWP-102_reset_meter",
           "title": {
             "en": "Reset meter values"
         },
@@ -65,7 +65,7 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=FGRGBWM-441"
+            "filter": "driver_id=TZWP-102"
           }
         ]
       }
@@ -483,7 +483,19 @@
 				"en": "Plug-in Switch Mini"
 				},
 			"class": "socket",
-			"capabilities": ["onoff","meter_power","measure_power"],
+			"capabilities": ["onoff","meter_power","measure_power","button.reset_meter"],
+			"capabilitiesOptions": 
+			{
+	            "button.reset_meter": {
+	               "maintenanceAction": true,
+	               "title": {
+	                  "en": "Reset power meter"
+	               },
+	               "desc": {
+	                  "en": "Reset the accumulated power usage (kWh), note that this can not be reversed."
+	               }
+	            }
+            }
 			"images": {
 				"large": "/drivers/TZWP-102/assets/images/large.png",
 				"small": "/drivers/TZWP-102/assets/images/small.png"
