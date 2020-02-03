@@ -1,0 +1,52 @@
+{
+  "id": "com.telldus",
+  "sdk": 2,
+  "name": {
+    "en": "Telldus Z-wave"
+  },
+  "description": {
+    "en": "Adds support for Telldus Z-wave devices"
+  },
+  "category": "appliances",
+  "version": "1.1.3",
+  "compatibility": ">=1.5.0",
+  "brandColor": "#be5c2e",
+  "author": {
+    "name": "Yngve Bøe Haugom",
+    "email": "yngve_haugom@hotmail.com"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "YHaugom"
+      }
+    }
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Yngve Bøe Haugom",
+        "email": "yngve_haugom@hotmail.com"
+      },
+      {
+        "name": "Michael Medin",
+        "email": "michael@medin.name"
+      },
+      {
+        "name": "Tobbe Eriksson",
+        "email": "xet.erixon@gmail.com"
+      },
+      {
+        "name": "Kristoffer Sjöberg",
+        "email": ""
+      }
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/yhaugom/com.telldus/issues"
+  },
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  }
+}

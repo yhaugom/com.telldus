@@ -1,0 +1,306 @@
+{
+  "name": {
+    "en": "Door/window sensor"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "alarm_contact",
+    "measure_battery"
+  ],
+  "energy": {
+    "batteries": [
+      "LS14250"
+    ]
+  },
+  "images": {
+    "large": "/drivers/TZDW-100/assets/images/large.png",
+    "small": "/drivers/TZDW-100/assets/images/small.png"
+  },
+  "tags": {
+    "en": [
+      "door sensor",
+      "window sensor",
+      "magnet sensor",
+      "contact alarm"
+    ]
+  },
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      },
+      "options": {
+        "singular": true
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "zwave": {
+    "manufacturerId": [
+      374
+    ],
+    "productTypeId": [
+      5
+    ],
+    "productId": [
+      1
+    ],
+    "wakeUpInterval": 21600,
+    "learnmode": {
+      "image": "/drivers/TZDW-100/assets/learnmode.svg",
+      "instruction": {
+        "en": "Automatic inclusion: \nWhen a battery is inserted, the device is in automatic inclusion mode for one minute (Network Wide Inclusion, NWI). If so, the device should be added now. \n For manual inclusion: \nPress the button on the device three times fast."
+      }
+    },
+    "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1455/Quickguide_Sensor_Switch_107x153mm_PMS.pdf",
+    "zwaveAllianceProductId": 1455,
+    "imageRemotePath": "https://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-15100003",
+    "associationGroups": [
+      1,
+      2,
+      3
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Z-Wave Plus Lifeline"
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "Sensor status\nThe sensor will send control commands to nodes in this group when the status of the sensor changes."
+        }
+      },
+      "3": {
+        "hint": {
+          "en": "Sensor status\nThe sensor will send control commands to nodes in this group when the sensor is opened only."
+        }
+      }
+    },
+    "unlearnmode": {
+      "instruction": {
+        "en": "Start the exclusion mode on the Z-Wave controller.\nPress the button on the device three times fast. The device will now be removed from the Z-Wave-network."
+      }
+    }
+  },
+  "settings": [
+    {
+      "type": "group",
+      "label": {
+        "en": "Association group 2"
+      },
+      "collapsed": true,
+      "children": [
+        {
+          "id": "command_assoc_group_2",
+          "type": "dropdown",
+          "value": "0",
+          "label": {
+            "en": "Command sent"
+          },
+          "hint": {
+            "en": "Select what type of command to be sent to nodes in association group 2. Possible values: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel."
+          },
+          "zwave": {
+            "index": 1,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Basic"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch Binary"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch All"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Switch Multilevel"
+              }
+            }
+          ]
+        },
+        {
+          "id": "value_assoc_group_2",
+          "type": "number",
+          "label": {
+            "en": "Value sent"
+          },
+          "hint": {
+            "en": "Select the value to be sent to association group 2 when Swith Multilevel is set in above setting.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Switch Multilevel is set in configuration 1."
+          },
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "value": -1,
+          "attr": {
+            "min": -1,
+            "max": 99
+          }
+        },
+        {
+          "id": "invert_signal_assoc_group_2",
+          "type": "checkbox",
+          "value": false,
+          "label": {
+            "en": "Invert signals"
+          },
+          "hint": {
+            "en": "When this configuration is set to inverted, an off-signal will be sent when the sensor is opened and on-signal when it's closed."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "collapsed": true,
+      "label": {
+        "en": "Association group 3"
+      },
+      "children": [
+        {
+          "id": "command_assoc_group_3",
+          "type": "dropdown",
+          "label": {
+            "en": "Command sent"
+          },
+          "hint": {
+            "en": "Select the type of command to be sent to nodes in association group 3. Possible values: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel."
+          },
+          "zwave": {
+            "index": 4,
+            "size": 1,
+            "signed": false
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Basic"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch Binary"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch All"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Switch Multilevel"
+              }
+            }
+          ]
+        },
+        {
+          "id": "value_assoc_group_3",
+          "type": "number",
+          "value": -1,
+          "attr": {
+            "min": -1,
+            "max": 99
+          },
+          "label": {
+            "en": "Value sent"
+          },
+          "hint": {
+            "en": "Select the value to be sent to association group 3 when Swith Multilevel is set in above setting.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Swith Multilevel is set in configuration 1."
+          },
+          "zwave": {
+            "index": 5,
+            "size": 1
+          }
+        },
+        {
+          "id": "invert_signal_assoc_group_3",
+          "type": "checkbox",
+          "label": {
+            "en": "Invert signals"
+          },
+          "hint": {
+            "en": "When this configuration is set to inverted, an off-signal will be sent when the sensor is opened, and an on-signal when it's closed."
+          },
+          "zwave": {
+            "index": 6,
+            "size": 1
+          },
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": "led_indicator",
+      "type": "checkbox",
+      "value": true,
+      "label": {
+        "en": "LED-Indicator"
+      },
+      "hint": {
+        "en": "Select if the LED indicator shold be active or not. Turn it off to reduce the power consumption."
+      },
+      "zwave": {
+        "index": 7,
+        "size": 1
+      }
+    },
+    {
+      "id": "command_lifeline_type",
+      "type": "dropdown",
+      "label": {
+        "en": "Command type"
+      },
+      "hint": {
+        "en": "Type of command to be sent in the Lifeline. 0 - Notification, 1 - Sensor binary."
+      },
+      "zwave": {
+        "index": 8,
+        "size": 1
+      },
+      "value": "0",
+      "values": [
+        {
+          "id": "0",
+          "label": {
+            "en": "Notification"
+          }
+        },
+        {
+          "id": "1",
+          "label": {
+            "en": "Sensor binary"
+          }
+        }
+      ]
+    }
+  ]
+}

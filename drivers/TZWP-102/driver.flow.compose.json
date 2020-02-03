@@ -1,0 +1,43 @@
+{
+  "conditions": [
+    {
+      "id": "current_power",
+      "title": {
+        "en": "The current power usage"
+      },
+      "args": [
+        {
+          "name": "W",
+          "type": "number",
+          "min": 0,
+          "max": 2300,
+          "step": 10,
+          "placeholder": {
+            "en": "Set a value in watts"
+          }
+        },
+        {
+          "name": "errormargin",
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "step": 10,
+          "placeholder": {
+            "en": "Set error margin in %"
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "TZWP-102_reset_meter",
+      "title": {
+        "en": "Reset meter values"
+      },
+      "hint": {
+        "en": "Reset the accumulated power usage (KWh). Can not be reversed."
+      }
+    }
+  ]
+}
