@@ -14,7 +14,7 @@ class TelldusTZWP102 extends ZwaveDevice {
         this.registerCapabilityListener('button.reset_meter', async () => {
             
             // Maintenance action button was pressed, return a promise 
-            return;
+            return this.meterReset();
         });
 
      	this.resetMeterAction = new Homey.FlowCardAction('TZWP-102_reset_meter')
@@ -22,6 +22,13 @@ class TelldusTZWP102 extends ZwaveDevice {
                 return args.device.resetMeterRunListener(args, state);
             });   
 	}
+	
+	async resetMeterRunListener(args, state) {
+		if (this.node.CommandClass.COMMAND_CLASS_METER) {
+			return await this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({});
+		} return Promise.reject('unknown_error');
+	}
+
 }
 
 module.exports = TelldusTZWP102;
