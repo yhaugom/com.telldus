@@ -484,7 +484,7 @@
 				},
 			"class": "socket",
 			"capabilities": ["onoff","meter_power","measure_power","button.reset_meter"],
-			"capabilitiesOptions": 
+			"capabilitiesOptions":
 			{
 	            "button.reset_meter": {
 	               "maintenanceAction": true,
@@ -662,7 +662,8 @@
 					},
 					"zwave": {
 						"index": 17,
-						"size": 1
+						"size": 1,
+            "signed": true
 					},
 					"label": {
 						"en": "Wattage report threshold (%)"
