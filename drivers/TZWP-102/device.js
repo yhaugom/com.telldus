@@ -9,19 +9,23 @@ class TelldusTZWP102 extends ZwaveDevice {
 		this.registerCapability('onoff','SWITCH_BINARY');
 		this.registerCapability('meter_power','METER');
 		this.registerCapability('measure_power','METER');
-		this.registerCapability('measure_current','METER');
-		this.registerCapability('measure_voltage','METER');
+		// this.registerCapability('measure_current','METER');
+		// this.registerCapability('measure_voltage','METER');
 
 
     this.registerCapabilityListener('button.reset_meter', async () => {
 
         // Maintenance action button was pressed, return a promise
-         return this.meterReset();
+				if (this.node &&
+					this.node.CommandClass.COMMAND_CLASS_METER) {
+					return await this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({});
+				}
+				return Promise.reject('This device does not support meter resets');
     });
 
    	this.resetMeterAction = new Homey.FlowCardAction('TZWP-102_reset_meter')
           .register().registerRunListener((args, state) => {
-              return args.device.resetMeterRunListener(args, state);
+              return resetMeterRunListener(args, state);
           });
 	}
 
