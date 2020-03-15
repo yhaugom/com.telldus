@@ -2,10 +2,10 @@
 
 const Homey = require('homey');
 
-class telldusApp extends Homey.App {
-	
+class TelldusApp extends Homey.App {
+
 	onInit() {
-		
+
 		let currentPowerCondition = new Homey.FlowCardCondition('current_power');
 		currentPowerCondition
 			.register()
@@ -21,10 +21,21 @@ class telldusApp extends Homey.App {
 				return Promise.resolve( false );
 			});
 
-		this.log('${Homey.manifest.id} is running...');
-		
+			let resetMeterAction = new Homey.FlowCardAction('TZWP-102_reset_meter');
+			resetMeterAction
+	    	.register()
+				.registerRunListener((args, state) => {
+					if (this.node &&
+						this.node.CommandClass.COMMAND_CLASS_METER) {
+						this.log('callback METER_RESET triggered');
+						return Promise.resolve(this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({}));
+						}return Promise.reject('unknown_error');
+	          });
+
+		this.log('Telldus Z-wave is running...');
+
 	}
-	
+
 }
 
-module.exports = telldusApp;
+module.exports = TelldusApp;
