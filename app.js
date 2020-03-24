@@ -29,7 +29,8 @@ class TelldusApp extends Homey.App {
 						this.node.CommandClass.COMMAND_CLASS_METER) {
 						this.log('callback METER_RESET triggered');
 						return Promise.resolve(this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({}));
-						}return Promise.reject('unknown_error');
+						}
+						return Promise.reject('unknown_error');
 	          });
 
 		this.log('Telldus Z-wave is running...');
