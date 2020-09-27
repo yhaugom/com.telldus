@@ -425,7 +425,7 @@
             "signed": false
           },
           "label": {
-            "en": "Countdown timer."
+            "en": "Countdown timer"
           },
           "hint": {
             "en": "Number of minutes before it automatically­ switches off. Default value: 0 (disabled)."
