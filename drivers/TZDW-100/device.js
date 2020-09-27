@@ -1,10 +1,12 @@
 'use strict';
 const Homey = require('homey');
-const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
+const { ZwaveDevice } = require('homey-zwavedriver');
 
 class TelldusDoorWindowSensor extends ZwaveDevice {
-	
-	async onMeshInit() {
+
+	async onNodeInit({ node }) {
+		this.enableDebug();
+		this.printNode();
 		// register the `measure_battery` capability with COMMAND_CLASS_BATTERY and with the
 		// default system capability handler (see: lib/zwave/system/capabilities)
  		this.registerCapability('measure_battery', 'BATTERY');
@@ -15,7 +17,7 @@ class TelldusDoorWindowSensor extends ZwaveDevice {
 		});
 	}
 
-	
+
 }
 
 module.exports = TelldusDoorWindowSensor;

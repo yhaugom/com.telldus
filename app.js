@@ -6,9 +6,6 @@ class TelldusApp extends Homey.App {
 
 	async onInit() {
 		let currentPowerCondition = this.homey.flow.getConditionCard('current_power');
-
-
-
 		currentPowerCondition
 			.registerRunListener(async( args, state ) => {
 				var power = args.plugin_switch_mini.getCapabilityValue('measure_power');
@@ -27,6 +24,7 @@ class TelldusApp extends Homey.App {
 					if (this.node &&
 						this.node.CommandClass.COMMAND_CLASS_METER) {
 						this.log('callback METER_RESET triggered');
+						this.log(this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({}));
 						return this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({});
 						}
 						return Promise.reject('unknown_error');
