@@ -22,5 +22,8 @@
 		},
 	"1.1.3": {
 		"en": "BETA - Fixed problem with plug-in switch TZWP-100 not updating status when manually triggered on plug. Energy compability updates."
+		},
+	"1.1.4": {
+		"en": "Updated description, and inclusion instructions."
 		}
 }

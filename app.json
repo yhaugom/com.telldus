@@ -46,6 +46,8 @@
   "bugs": {
     "url": "https://github.com/yhaugom/com.telldus/issues"
   },
+  "homeyCommunityTopicId": 1548,
+  "source": "https://github.com/yhaugom/com.telldus",
   "images": {
     "large": "/assets/images/large.png",
     "small": "/assets/images/small.png"
@@ -107,7 +109,7 @@
         "learnmode": {
           "image": "/drivers/TZDW-100/assets/learnmode.svg",
           "instruction": {
-            "en": "Automatic inclusion: \nWhen a battery is inserted, the device is in automatic inclusion mode for one minute (Network Wide Inclusion, NWI). If so, the device should be added now. \n For manual inclusion: \nPress the button on the device three times fast."
+            "en": "Automatic inclusion: \nWhen a battery is inserted, the device is in automatic inclusion mode for one minute (Network Wide Inclusion, NWI).\n For manual inclusion: \nPress the button on the device three times fast."
           }
         },
         "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1455/Quickguide_Sensor_Switch_107x153mm_PMS.pdf",
@@ -137,7 +139,7 @@
         },
         "unlearnmode": {
           "instruction": {
-            "en": "Press the button on the device three times fast. The device will now be reset/removed from the Z-Wave-network."
+            "en": "Press the button on the device three times fast. The device will be reset/removed from the Z­-wave network, and ready for inclusion."
           }
         }
       },
@@ -383,7 +385,7 @@
         "learnmode": {
           "image": "/drivers/TZWP-100/assets/learnmode.svg",
           "instruction": {
-            "en": "Automatic inclusion: \nWhen the device is inserted into an electrical outlet, it’s in automatical inclusion mode for four minutes (Network Wide Inclusion, NWI). This means that the device should now be added automatically.\nTo manually add device to network: \n Press the button on the device three times fast. \nIf the device is not added to any Z-wave network, the LED will flash red slowly."
+            "en": "Automatic inclusion: \nWhen the device is inserted into an electrical outlet, it’s in automatical inclusion mode for four minutes (Network Wide Inclusion, NWI).\nTo manually add device to network: \n Press the button on the device three times fast. \nIf the device is not added to any Z-wave network, the LED will flash red slowly."
           }
         },
         "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1536/manual.pdf",
@@ -407,7 +409,7 @@
         },
         "unlearnmode": {
           "instruction": {
-            "en": "Press the button on the device three times fast. The device will now be reset/removed from the Z­-wave network"
+            "en": "Press the button on the device three times fast. The device will be reset/removed from the Z­-wave network, and ready for inclusion."
           }
         }
       },
@@ -513,7 +515,7 @@
         ],
         "learnmode": {
           "instruction": {
-            "en": "Automatic inclusion: \nWhen the device is inserted into an electrical outlet it’s in automatical inclusion mode for four minutes (Network Wide Inclusion, NWI). In that case the device should now be added automatically.\nTo manually add device to network: \nPress the button on the device three times fast. \nIf the device is not added to any Z-wave network, the LED will flash red slowly."
+            "en": "Automatic inclusion: \nWhen the device is inserted into an electrical outlet it’s in automatical inclusion mode for four minutes (Network Wide Inclusion, NWI).\nTo manually add device to network: \nPress the button on the device three times fast. \nIf the device is not added to any Z-wave network, the LED will flash red slowly."
           }
         },
         "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2892/TZWP-102_technical-manual.pdf",
@@ -537,7 +539,7 @@
         },
         "unlearnmode": {
           "instruction": {
-            "en": "Press the button on the device three times fast. The device will now be reset/removed from the Z­-wave network"
+            "en": "Press the button on the device three times fast. The device will be reset/removed from the Z­-wave network, and ready for inclusion."
           }
         }
       },
