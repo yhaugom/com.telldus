@@ -54,7 +54,7 @@
     "learnmode": {
       "image": "/drivers/TZDW-100/assets/learnmode.svg",
       "instruction": {
-        "en": "Automatic inclusion: \nWhen a battery is inserted, the device is in automatic inclusion mode for one minute (Network Wide Inclusion, NWI). If so, the device should be added now. \n For manual inclusion: \nPress the button on the device three times fast."
+        "en": "Automatic inclusion: \nWhen a battery is inserted, the device is in automatic inclusion mode for one minute (Network Wide Inclusion, NWI).\n For manual inclusion: \nPress the button on the device three times fast."
       }
     },
     "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1455/Quickguide_Sensor_Switch_107x153mm_PMS.pdf",
@@ -84,7 +84,7 @@
     },
     "unlearnmode": {
       "instruction": {
-        "en": "Start the exclusion mode on the Z-Wave controller.\nPress the button on the device three times fast. The device will now be removed from the Z-Wave-network."
+        "en": "Press the button on the device three times fast. The device will be reset/removed from the Z­-wave network, and ready for inclusion."
       }
     }
   },

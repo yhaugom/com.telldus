@@ -45,6 +45,8 @@
   "bugs": {
     "url": "https://github.com/yhaugom/com.telldus/issues"
   },
+  "homeyCommunityTopicId": 1548,
+  "source": "https://github.com/yhaugom/com.telldus",
   "images": {
     "large": "/assets/images/large.png",
     "small": "/assets/images/small.png"

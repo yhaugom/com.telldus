@@ -15,3 +15,5 @@
 * 1.1.0 - Stable version
 * 1.1.1 (beta) - Fixed settings hint. Wrong description for TZWP-102 when power failure. Bad default values for TZWP-102 settings, and changed scale for percentage scale.
 * 1.1.2 - Replaced icon for TZWP-102. Was displayed incorrectly in newer version of app. Thanks to Marcus Karlsson and Johan Bendz for icon contribution and testing.
+* 1.1.3 - Fixed problem with plug-in switch TZWP-100 not updating status when manually triggered on plug. Energy compability updates.
+* 1.1.4 - Exclusion description updated. Readme.txt updated.

@@ -36,7 +36,7 @@
     ],
     "learnmode": {
       "instruction": {
-        "en": "Automatic inclusion: \nWhen the device is inserted into an electrical outlet it’s in automatical inclusion mode for four minutes (Network Wide Inclusion, NWI). In that case the device should now be added automatically.\nTo manually add device to network: \nPress the button on the device three times fast. \nIf the device is not added to any Z-wave network, the LED will flash red slowly."
+        "en": "Automatic inclusion: \nWhen the device is inserted into an electrical outlet it’s in automatical inclusion mode for four minutes (Network Wide Inclusion, NWI).\nTo manually add device to network: \nPress the button on the device three times fast. \nIf the device is not added to any Z-wave network, the LED will flash red slowly."
       }
     },
     "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/2892/TZWP-102_technical-manual.pdf",
@@ -60,7 +60,7 @@
     },
     "unlearnmode": {
       "instruction": {
-        "en": "Select 'Remove a device' from Homey settings under 'Z-wave'. Press the button on the device three times fast. The device will now be removed from the Z­-wave network"
+        "en": "Press the button on the device three times fast. The device will be reset/removed from the Z­-wave network, and ready for inclusion."
       }
     }
   },
