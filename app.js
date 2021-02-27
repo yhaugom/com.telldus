@@ -17,19 +17,7 @@ class TelldusApp extends Homey.App {
 				}
 				return false;
 			});
-
-			let resetMeterAction = this.homey.flow.getActionCard('TZWP-102_reset_meter');
-			resetMeterAction
-				.registerRunListener(async(args, state) => {
-					if (this.node &&
-						this.node.CommandClass.COMMAND_CLASS_METER) {
-						this.log('callback METER_RESET triggered');
-						this.log(this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({}));
-						return this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({});
-						}
-						return Promise.reject('unknown_error');
-	          });
-
+			
 		this.log('Telldus Z-wave is running...');
 
 	}
