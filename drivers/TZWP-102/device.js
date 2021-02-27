@@ -19,7 +19,14 @@ class TelldusTZWP102 extends ZwaveDevice {
 				if (this.node && this.node.CommandClass.COMMAND_CLASS_METER) 
 				{
 					this.log('Node has METER_RESET');
-					return await this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({});
+					let resetSuccess = await this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({});
+					
+					//If reset, poll meter value to update user interface.
+					if(resetSuccess)
+					{
+						this.node.CommandClass.COMMAND_CLASS_METER.METER_GET({});
+						return resetSuccess;
+					}
 				}
 				this.log('Does not support meter resets, or not a valid node.');
 				return Promise.reject('The device could not be reset');
@@ -33,7 +40,14 @@ class TelldusTZWP102 extends ZwaveDevice {
 				if (this.node && this.node.CommandClass.COMMAND_CLASS_METER) 
 				{
 					this.log('Action card METER_RESET triggered');
-					return await this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({});
+					let actionResetSuccess = await this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({});
+					
+					//If reset, poll meter value to update user interface.
+					if(actionResetSuccess)
+					{
+						this.node.CommandClass.COMMAND_CLASS_METER.METER_GET({});
+						return actionResetSuccess;					
+					}
 				}
 				this.log('Does not support meter resets, or not a valid node.');
 				return Promise.reject('The device could not be reset');
