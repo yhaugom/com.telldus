@@ -1,29 +1,32 @@
 {
-	"1.0.0": {
-		"en": "Initial version - support for Door/window sensor."
-		},
-	"1.0.1": {
-		"en": "Added Plug-in Switch (Schuko) TZWP-100. Bugfix."
-		},
-	"1.0.2": { 
-		"en": "Added Telldus plug-in mini switch."
-		},
-	"1.0.3": {
-		"en": "Rewrite to support SDK 2, and new athom-cli. Changed id´s to be strings. Added condition - meassured power in range for Telldus TZWP-102 plug."
-		},
-	"1.1.0": {
-		"en": "Stable version"
-		},
-	"1.1.1": {
-		"en": "(beta) - Fixed settings hint. Wrong description for TZWP-102 when power failure. Bad default values for TZWP-102 settings, and changed scale for percentage scale."
-		},
-	"1.1.2": {
-		"en": "Replaced icon for TZWP-102. Was displayed incorrectly in newer version of app. Thanks to Marcus Karlsson and Johan Bendz for icon contribution and testing."
-		},
-	"1.1.3": {
-		"en": "BETA - Fixed problem with plug-in switch TZWP-100 not updating status when manually triggered on plug. Energy compability updates."
-		},
-	"1.1.4": {
-		"en": "Updated description, and inclusion instructions."
-		}
+  "1.0.0": {
+    "en": "Initial version - support for Door/window sensor."
+  },
+  "1.0.1": {
+    "en": "Added Plug-in Switch (Schuko) TZWP-100. Bugfix."
+  },
+  "1.0.2": {
+    "en": "Added Telldus plug-in mini switch."
+  },
+  "1.0.3": {
+    "en": "Rewrite to support SDK 2, and new athom-cli. Changed id´s to be strings. Added condition - meassured power in range for Telldus TZWP-102 plug."
+  },
+  "1.1.0": {
+    "en": "Stable version"
+  },
+  "1.1.1": {
+    "en": "(beta) - Fixed settings hint. Wrong description for TZWP-102 when power failure. Bad default values for TZWP-102 settings, and changed scale for percentage scale."
+  },
+  "1.1.2": {
+    "en": "Replaced icon for TZWP-102. Was displayed incorrectly in newer version of app. Thanks to Marcus Karlsson and Johan Bendz for icon contribution and testing."
+  },
+  "1.1.3": {
+    "en": "BETA - Fixed problem with plug-in switch TZWP-100 not updating status when manually triggered on plug. Energy compability updates."
+  },
+  "1.1.4": {
+    "en": "Updated description, and inclusion instructions."
+  },
+  "1.2.0": {
+    "en": "Support for Homey V5, SDK 3.0, added power reset for TZWP-102 (maintainance action and flow action), inclusion/exclusion description updated, updated icon for TZWP-100. Updated readme file, plus minor changes."
+  }
 }
