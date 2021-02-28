@@ -8,7 +8,7 @@ class TelldusTZWP102 extends ZwaveDevice {
 		this.enableDebug();
 		this.printNode();
 		
-		this.registerCapability('onoff','BASIC');
+// 		this.registerCapability('onoff','BASIC');
 		this.registerCapability('onoff','SWITCH_BINARY');
 		this.registerCapability('meter_power','METER');
 		this.registerCapability('measure_power','METER');
@@ -18,12 +18,9 @@ class TelldusTZWP102 extends ZwaveDevice {
 		    	// Register button. Maintenance action button was pressed, return a promise
 				if (this.node && this.node.CommandClass.COMMAND_CLASS_METER) 
 				{
-					this.log('Node has METER_RESET');
-					let meterResetButton = await this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({});
-					
-					//poll meter value to update user interface.
-					this.node.CommandClass.COMMAND_CLASS_METER.METER_GET({});
-					return meterResetButton;
+					this.log('Maintainance button METER_RESET pushed.');
+					return await this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({});
+
 				}
 				this.log('Does not support meter resets, or not a valid node.');
 				return Promise.reject('The device could not be reset');
@@ -37,13 +34,8 @@ class TelldusTZWP102 extends ZwaveDevice {
 				if (this.node && this.node.CommandClass.COMMAND_CLASS_METER) 
 				{
 					this.log('Action card METER_RESET triggered');
-					let meterResetTrigger = await this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({});
-					
-					//poll meter value to update user interface.
-					this.node.CommandClass.COMMAND_CLASS_METER.METER_GET({});
-					return meterResetTrigger;					
+					return await this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({});				
 				}
-				
 				this.log('Does not support meter resets, or not a valid node.');
 				return Promise.reject('The device could not be reset');
 		    }
