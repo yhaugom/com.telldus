@@ -8,7 +8,7 @@ class TelldusTZWP102 extends ZwaveDevice {
 		this.enableDebug();
 		this.printNode();
 		
-// 		this.registerCapability('onoff','BASIC');
+		this.registerCapability('onoff','BASIC');
 		this.registerCapability('onoff','SWITCH_BINARY');
 		this.registerCapability('meter_power','METER');
 		this.registerCapability('measure_power','METER');
