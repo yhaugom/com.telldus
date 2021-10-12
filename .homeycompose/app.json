@@ -5,10 +5,11 @@
     "en": "Telldus Z-wave"
   },
   "description": {
-    "en": "Adds support for Telldus Z-wave devices"
+    "en": "Adds support for Telldus Z-wave devices",
+    "no": "Lar deg bruke Z-wave-enheter fra Telldus."
   },
   "category": "appliances",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "compatibility": ">=5.0.0",
   "brandColor": "#be5c2e",
   "author": {
@@ -50,5 +51,17 @@
   "images": {
     "large": "/assets/images/large.png",
     "small": "/assets/images/small.png"
+  },
+  "tags": {
+    "en": [
+      "door sensor",
+      " window sensor",
+      " power plug"
+    ],
+    "no": [
+      "dørsensor",
+      " vindussensor",
+      " strømplugg"
+    ]
   }
 }

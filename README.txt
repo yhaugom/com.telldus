@@ -1,1 +1,0 @@
-With this app you can add and control Z-wave devices from Telldus.
