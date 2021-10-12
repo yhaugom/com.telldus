@@ -41,15 +41,9 @@
     }
   ],
   "zwave": {
-    "manufacturerId": [
-      374
-    ],
-    "productTypeId": [
-      5
-    ],
-    "productId": [
-      1
-    ],
+    "manufacturerId": 374,
+    "productTypeId": [5],
+    "productId": [1],
     "wakeUpInterval": 21600,
     "learnmode": {
       "image": "/drivers/TZDW-100/assets/learnmode.svg",
