@@ -5,6 +5,7 @@
 ## Supported devices
 * [Z-wave Door/window sensor](https://products.z-wavealliance.org/products/1455/) - Contact alarm (TZDW-100)
 * [Z-wave Plug-in switch](https://products.z-wavealliance.org/products/1536/) - Plug-in Switch (Schuko - TZWP-100)
+* [Z-wave Plug-in Switch](https://products.z-wavealliance.org/products/1542) - Plug-in Switch (French - TZWP-101)
 * [Z-wave Plug-in switch](https://products.z-wavealliance.org/products/2892) - Plug-in Switch Mini (TZWP-102)
 
 ## Version log
@@ -17,3 +18,5 @@
 * 1.1.2 - Replaced icon for TZWP-102. Was displayed incorrectly in newer version of app. Thanks to Marcus Karlsson and Johan Bendz for icon contribution and testing.
 * 1.1.3 - Fixed problem with plug-in switch TZWP-100 not updating status when manually triggered on plug. Energy compability updates.
 * 1.1.4 - Exclusion description updated. Readme.txt updated.
+* 1.2.0 - Support for Homey V5, SDK 3.0, added power reset for TZWP-102 (maintainance action and flow action), inclusion/exclusion description updated, updated icon for TZWP-100. Updated readme file, plus minor changes.
+* 1.2.1 - Added Plug-in French version TZWP-101, description in Norwegian.
