@@ -9,7 +9,7 @@
     "en": "Adds support for Telldus Z-wave devices"
   },
   "category": "appliances",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "compatibility": ">=5.0.0",
   "brandColor": "#be5c2e",
   "author": {

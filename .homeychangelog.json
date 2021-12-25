@@ -28,5 +28,8 @@
   },
   "1.2.0": {
     "en": "Support for Homey V5, SDK 3.0, added power reset for TZWP-102 (maintainance action and flow action), inclusion/exclusion description updated, updated icon for TZWP-100. Updated readme file, plus minor changes."
+  },
+  "1.2.1": {
+    "en": "Bugfix - fix to TZWP-102 not updating status when manually toggled."
   }
 }
