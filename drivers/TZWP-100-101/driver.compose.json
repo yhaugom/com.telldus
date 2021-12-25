@@ -12,8 +12,13 @@
   },
   "zwave": {
     "manufacturerId": 374,
-    "productTypeId": [3],
-    "productId": [1,2],
+    "productTypeId": [
+      3
+    ],
+    "productId": [
+      1,
+      2
+    ],
     "learnmode": {
       "image": "/drivers/TZWP-100-101/assets/learnmode.svg",
       "instruction": {
@@ -106,5 +111,8 @@
         "en": "Set the intensity of the LED indicator in %. Default value: 100. Possible values: 0­-100"
       }
     }
+  ],
+  "connectivity": [
+    "zwave"
   ]
 }

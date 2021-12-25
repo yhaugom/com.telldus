@@ -1,0 +1,31 @@
+{
+  "name": {
+    "en": "Door/Window sensor (white label)",
+    "no": "Dør/vindussensor (white label)"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "alarm_contact"
+  ],
+  "images": {
+    "large": "/drivers/512/assets/images/large.png",
+    "small": "/drivers/512/assets/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": null,
+    "productTypeId": [
+      null
+    ],
+    "productId": [
+      null
+    ]
+  },
+  "connectivity": [
+    "zwave"
+  ],
+  "energy": {
+    "batteries": [
+      "2xAAA"
+    ]
+  }
+}

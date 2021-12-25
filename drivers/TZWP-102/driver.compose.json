@@ -26,8 +26,12 @@
   },
   "zwave": {
     "manufacturerId": 374,
-    "productTypeId": [3],
-    "productId": [3],
+    "productTypeId": [
+      3
+    ],
+    "productId": [
+      3
+    ],
     "learnmode": {
       "instruction": {
         "en": "Automatic inclusion: \nWhen the device is inserted into an electrical outlet it’s in automatical inclusion mode for four minutes (Network Wide Inclusion, NWI).\nTo manually add device to network: \nPress the button on the device three times fast. \nIf the device is not added to any Z-wave network, the LED will flash red slowly."
@@ -278,5 +282,8 @@
         "en": "The interval time in seconds between sending current report (A) to Homey. 0 - Disabled.\nValid values are 5 - 2678400."
       }
     }
+  ],
+  "connectivity": [
+    "zwave"
   ]
 }

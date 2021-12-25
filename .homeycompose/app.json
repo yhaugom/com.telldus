@@ -63,5 +63,8 @@
       " vindussensor",
       " strømplugg"
     ]
-  }
+  },
+  "platforms": [
+    "local"
+  ]
 }
