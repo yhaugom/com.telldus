@@ -1,0 +1,36 @@
+[
+  {
+    "id": "15",
+    "value": false,
+    "label": {
+      "en": "Value of the BASIC SET"
+    },
+    "hint": {
+      "en": "Door/Window Sensor can reverse its value of BASIC SET when the magnet is triggered."
+    },
+    "zwave": {
+      "index": 15,
+      "size": 1
+    },
+    "type": "checkbox"
+  },
+  {
+    "id": "32",
+    "value": 20,
+    "label": {
+      "en": "Level of low battery"
+    },
+    "hint": {
+      "en": "This parameter defines a battery level as the “low battery”."
+    },
+    "zwave": {
+      "index": 32,
+      "size": 1
+    },
+    "attr": {
+      "min": 10,
+      "max": 50
+    },
+    "type": "number"
+  }
+]

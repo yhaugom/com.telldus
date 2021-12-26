@@ -1,0 +1,37 @@
+{
+  "id": "TZDW-15110",
+  "name": {
+    "en": "TZDW-15110"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "alarm_battery",
+    "alarm_contact",
+    "alarm_tamper"
+  ],
+  "images": {
+    "large": "/drivers/TZDW-15110/assets/images/large.png",
+    "small": "/drivers/TZDW-15110/assets/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 520,
+    "productTypeId": [
+      512
+    ],
+    "productId": [
+      8
+    ],
+    "zwaveAllianceProductId": 2844,
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Door/Window Sensor will send notification report and battery report to the associated nodes."
+        }
+      }
+    }
+  }
+}
