@@ -12,7 +12,8 @@
   ],
   "images": {
     "large": "/drivers/TZDW-15110/assets/images/large.png",
-    "small": "/drivers/TZDW-15110/assets/images/small.png"
+    "small": "/drivers/TZDW-15110/assets/images/small.png",
+    "xlarge": "/drivers/TZDW-15110/assets/xlarge.png"
   },
   "zwave": {
     "manufacturerId": 520,

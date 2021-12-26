@@ -7,8 +7,8 @@
     "onoff"
   ],
   "images": {
-    "large": "/drivers/TZWP-100-101/assets/images/large.png",
-    "small": "/drivers/TZWP-100-101/assets/images/small.png"
+    "large": "/drivers/TZWP-101/assets/images/large.png",
+    "small": "/drivers/TZWP-101/assets/images/small.png"
   },
   "zwave": {
     "manufacturerId": 374,
@@ -20,7 +20,7 @@
       2
     ],
     "learnmode": {
-      "image": "/drivers/TZWP-100-101/assets/learnmode.svg",
+      "image": "/drivers/TZWP-101/assets/learnmode.svg",
       "instruction": {
         "en": "Automatic inclusion: \nWhen the device is inserted into an electrical outlet, it’s in automatical inclusion mode for four minutes (Network Wide Inclusion, NWI).\nTo manually add device to network: \n Press the button on the device three times fast. \nIf the device is not added to any Z-wave network, the LED will flash red slowly."
       }
