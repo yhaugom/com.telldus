@@ -42,7 +42,8 @@
   ],
   "energy": {
     "batteries": [
-      "2xAAA"
+      "AAA",
+      "AAA"
     ]
   }
 }
