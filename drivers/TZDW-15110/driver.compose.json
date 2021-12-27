@@ -22,14 +22,35 @@
     "productId": [
       8
     ],
+    "wakeUpInterval": 43200,
     "zwaveAllianceProductId": 2844,
+    "learnmode": {
+      "image": "/drivers/TZDW-15110/assets/learnmode.svg",
+      "instruction": {
+        "en": "Click the button under the panel three times to enable reset/inclusion mode.",
+        "no": "Trykk på den lille sorte knappen under batteridekselet tre ganger raskt. Dette klargjør enheten for inkludering."
+      }
+    },
+    "unlearnmode": {
+      "instruction": {
+        "en": "Press the button under the battery panel three times fast. The device will be reset/removed from the Z­-wave network, and ready for inclusion.",
+        "no": "Trykk på den lille sorte knappen under batteridekselet tre ganger raskt. Dette nullstiller/klargjør enheten for inkludering."
+      }
+    },
     "associationGroups": [
       1
     ],
     "associationGroupsOptions": {
       "1": {
         "hint": {
-          "en": "Door/Window Sensor will send notification report and battery report to the associated nodes."
+          "en": "Door/Window Sensor will send notification report and battery report to the associated nodes (Z-wave lifeline).",
+          "no": "Dør-/vindussensor vil sende en \"notification report\" til assosierte enheter (noder) i gruppe 1 (Z-wave lifeline)."
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "Door/Window Sensor will send Basic Set command to the associated nodes when the sensor alarm is triggered (open/close).",
+          "no": "Dør-/vindussensor vil sende Basic Set kommando til enheter i assosiasjonsgruppe 2 når sensor åpnes eller lukkes."
         }
       }
     }

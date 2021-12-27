@@ -1,12 +1,31 @@
 [
   {
-    "id": "15",
+    "id": "BASIC_SET",
     "value": false,
     "label": {
-      "en": "Value of the BASIC SET"
+      "en": "BASIC_SET is sent",
+      "no": "BASIC_SET sendes"
     },
     "hint": {
-      "en": "Door/Window Sensor can reverse its value of BASIC SET when the magnet is triggered."
+      "en": "BASIC_SET is sent to nodes in association group 2 when enabled (default is off). When turned on, you can have this sensor trigger lights (or other BASIC_SET compatible devices) when a door/window is opened.",
+      "no": "BASIC_SET sendes til enheter i assosiasjonsgruppe 2 når på (standardverdi er av). Når denne er aktivert vil f.eks. lys (eller andre BASIC_SET kompatible enheter) i ass.gruppe 2 slås på når en dør eller et vindu åpnes."
+    },
+    "zwave": {
+      "index": 14,
+      "size": 1
+    },
+    "type": "checkbox"
+  },
+  {
+    "id": "BASIC_SET_invert",
+    "value": false,
+    "label": {
+      "en": "Invert BASIC_SET triggering",
+      "no": "Inverter BASIC_SET virkemåte"
+    },
+    "hint": {
+      "en": "Invert the way the nodes in association group 2 is triggered with the BASIC_SET command. BASIC_SET must be enabled for this setting to have any effect. For example turn off a light in ass. group 2 when a door is opened.",
+      "no": "Inverter måten enheter i assosiasjonsgruppe 2 blir aktivert med BASIC_SET kommandoen. BASIC_SET må være aktivert for at denne innstillingen skal ha noen effekt. F.eks. slå av et lys i ass.gruppe 2 når en dør åpnes."
     },
     "zwave": {
       "index": 15,
@@ -15,13 +34,15 @@
     "type": "checkbox"
   },
   {
-    "id": "32",
+    "id": "low_battery",
     "value": 20,
     "label": {
-      "en": "Level of low battery"
+      "en": "Level of low battery alarm",
+      "no": "Nivå for alarm for lavt batteri. Default value is 20"
     },
     "hint": {
-      "en": "This parameter defines a battery level as the “low battery”."
+      "en": "This parameter defines a battery level as the “low battery”.",
+      "no": "Denne verdien setter et nivå for når batterivarsel skal aktiveres. Standardverdi er 20."
     },
     "zwave": {
       "index": 32,

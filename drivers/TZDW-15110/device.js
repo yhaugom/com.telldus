@@ -1,13 +1,18 @@
 'use strict';
+const Homey = require('homey');
+const { ZwaveDevice } = require('homey-zwavedriver');
 
-const { ZwaveDevice } = require('homey-meshdriver');
+class TelldusDoorWindowSensor15110 extends ZwaveDevice {
 
-class MyZWaveDevice extends ZwaveDevice {
+	async onNodeInit({ node }) {
 
-	onMeshInit() {
-		this.log('MyZWaveDevice has been inited');
+		// register device capabilities
+		this.registerCapability('alarm_contact', 'NOTIFICATION');
+		this.registerCapability('alarm_tamper', 'NOTIFICATION');
+		this.registerCapability('alarm_battery', 'BATTERY');
+		this.registerCapability('measure_battery', 'BATTERY');
 	}
 
 }
 
-module.exports = MyZWaveDevice;
+module.exports = TelldusDoorWindowSensor15110;
