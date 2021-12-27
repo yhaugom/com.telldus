@@ -390,8 +390,9 @@
         "alarm_tamper"
       ],
       "images": {
+        "small": "/drivers/TZDW-15110/assets/images/small.png",
         "large": "/drivers/TZDW-15110/assets/images/large.png",
-        "small": "/drivers/TZDW-15110/assets/images/small.png"
+        "xlarge": "/drivers/TZDW-15110/assets/images/xlarge.png"
       },
       "zwave": {
         "manufacturerId": 520,

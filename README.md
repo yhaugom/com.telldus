@@ -20,3 +20,4 @@
 * 1.1.4 - Exclusion description updated. Readme.txt updated.
 * 1.2.0 - Support for Homey V5, SDK 3.0, added power reset for TZWP-102 (maintainance action and flow action), inclusion/exclusion description updated, updated icon for TZWP-100. Updated readme file, plus minor changes.
 * 1.2.1 - Added Plug-in French version TZWP-101, description in Norwegian.
+* 1.3.0 Added new device, Telldus Door/Window sensor. White label device with Telldus branding. Updated localization, plus various minor fixes.

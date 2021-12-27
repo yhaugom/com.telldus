@@ -31,5 +31,9 @@
   },
   "1.2.1": {
     "en": "Bugfix - fix to TZWP-102 not updating status when manually toggled."
+  },
+  "1.3.0": {
+    "en": "Added new device Telldus Door/Window sensor. White label device with Telldus branding. Updated localization, plus various minor fixes.",
+    "no": "Lagt til støtte for ny dør-/vindussensor. Enheten er en \"white label\" og finnes under ulike merkenavn. Også lagt til noen få oversettelser til Norsk."
   }
 }
