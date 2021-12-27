@@ -44,14 +44,14 @@
     "associationGroupsOptions": {
       "1": {
         "hint": {
-          "en": "Door/Window Sensor will send notification report and battery report to the associated nodes (Z-wave lifeline).",
-          "no": "Dør-/vindussensor vil sende en \"notification report\" til assosierte enheter (noder) i gruppe 1 (Z-wave lifeline)."
+          "en": "Door Sensor will send notification report and battery report to the associated nodes (Z-wave lifeline).",
+          "no": "Dørsensor vil sende en \"notification report\" til assosierte enheter (noder) i gruppe 1 (Z-wave lifeline)."
         }
       },
       "2": {
         "hint": {
-          "en": "Door/Window Sensor will send Basic Set command to the associated nodes when the sensor alarm is triggered (open/close).",
-          "no": "Dør-/vindussensor vil sende Basic Set kommando til enheter i assosiasjonsgruppe 2 når sensor åpnes eller lukkes."
+          "en": "Door Sensor will send Basic Set command to the associated nodes when the sensor alarm is triggered (open/close).",
+          "no": "Dørsensor vil sende Basic Set kommando til enheter i assosiasjonsgruppe 2 når sensor åpnes eller lukkes."
         }
       }
     }
