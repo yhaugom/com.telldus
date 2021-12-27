@@ -4,7 +4,7 @@
 * The id of the drivers is the product number from [The Z-wave Alliance.](https://products.z-wavealliance.org/products/)
 ## Supported devices
 * [Z-wave Door/window sensor](https://products.z-wavealliance.org/products/1455/) - Contact sensor (TZDW-100)
-* [Z-wave Door/window sensor](https://telldus.com/en/p/door-sensor-z-wave/) - White label product with Telldus rebrand. - Contact sensor (TZDW-15110)
+* [Z-wave Door sensor](https://telldus.com/en/p/door-sensor-z-wave/) - White label product with Telldus rebrand. - Contact sensor (TZDW-15110)
 * [Z-wave Plug-in switch](https://products.z-wavealliance.org/products/1536/) - Plug-in Switch (Schuko - TZWP-100)
 * [Z-wave Plug-in Switch](https://products.z-wavealliance.org/products/1542) - Plug-in Switch (French - TZWP-101)
 * [Z-wave Plug-in switch](https://products.z-wavealliance.org/products/2892) - Plug-in Switch Mini (TZWP-102)
@@ -21,4 +21,4 @@
 * 1.1.4 - Exclusion description updated. Readme.txt updated.
 * 1.2.0 - Support for Homey V5, SDK 3.0, added power reset for TZWP-102 (maintainance action and flow action), inclusion/exclusion description updated, updated icon for TZWP-100. Updated readme file, plus minor changes.
 * 1.2.1 - Added Plug-in French version TZWP-101, description in Norwegian.
-* 1.3.0 Added new device, Telldus Door/Window sensor. White label device with Telldus branding. Updated localization, plus various minor fixes.
+* 1.3.0 Added new device, Telldus Door sensor. White label device with Telldus branding. Updated localization, plus various minor fixes.

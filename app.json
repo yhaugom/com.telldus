@@ -407,14 +407,14 @@
         "learnmode": {
           "image": "/drivers/TZDW-15110/assets/learnmode.svg",
           "instruction": {
-            "en": "Click the button under the panel three times to enable reset/inclusion mode.",
+            "en": "Click the button under the panel three times to enable inclusion mode.",
             "no": "Trykk på den lille sorte knappen under batteridekselet tre ganger raskt. Dette klargjør enheten for inkludering."
           }
         },
         "unlearnmode": {
           "instruction": {
             "en": "Press the button under the battery panel three times fast. The device will be reset/removed from the Z­-wave network, and ready for inclusion.",
-            "no": "Trykk på den lille sorte knappen under batteridekselet tre ganger raskt. Dette nullstiller/klargjør enheten for inkludering."
+            "no": "Trykk på den lille sorte knappen under batteridekselet tre ganger raskt. Dette nullstiller og eventuelt fjerner enheten."
           }
         },
         "associationGroups": [
