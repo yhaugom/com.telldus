@@ -3,7 +3,8 @@
 # Adds support for Telldus Z-wave devices
 * The id of the drivers is the product number from [The Z-wave Alliance.](https://products.z-wavealliance.org/products/)
 ## Supported devices
-* [Z-wave Door/window sensor](https://products.z-wavealliance.org/products/1455/) - Contact alarm (TZDW-100)
+* [Z-wave Door/window sensor](https://products.z-wavealliance.org/products/1455/) - Contact sensor (TZDW-100)
+* [Z-wave Door/window sensor] White label product with Telldus rebrand. - Contact sensor (TZDW-15110)
 * [Z-wave Plug-in switch](https://products.z-wavealliance.org/products/1536/) - Plug-in Switch (Schuko - TZWP-100)
 * [Z-wave Plug-in Switch](https://products.z-wavealliance.org/products/1542) - Plug-in Switch (French - TZWP-101)
 * [Z-wave Plug-in switch](https://products.z-wavealliance.org/products/2892) - Plug-in Switch Mini (TZWP-102)
