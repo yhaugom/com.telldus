@@ -22,6 +22,9 @@ class TelldusApp extends Homey.App {
 
 	}
 
+	async onUninit() {
+		this.api.destroy();
+	  }
 }
 
 module.exports = TelldusApp;
