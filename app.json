@@ -10,7 +10,7 @@
     "no": "Lar deg bruke Z-wave-enheter fra Telldus."
   },
   "category": "appliances",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "compatibility": ">=5.0.0",
   "brandColor": "#be5c2e",
   "author": {
