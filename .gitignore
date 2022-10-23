@@ -2,3 +2,7 @@
 com.telldus-homey.code-workspace
 node_modules
 build
+
+
+# Added by Homey CLI
+/.homeybuild/

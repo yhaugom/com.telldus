@@ -51,7 +51,8 @@
   "source": "https://github.com/yhaugom/com.telldus",
   "images": {
     "large": "/assets/images/large.png",
-    "small": "/assets/images/small.png"
+    "small": "/assets/images/small.png",
+    "xlarge": "assets/images/xlarge.png"
   },
   "tags": {
     "en": [
