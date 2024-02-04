@@ -285,5 +285,8 @@
   ],
   "connectivity": [
     "zwave"
+  ],
+  "platforms": [
+    "local"
   ]
 }
