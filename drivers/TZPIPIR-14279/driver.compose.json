@@ -1,0 +1,44 @@
+{
+  "name": {
+    "en": "Pet immune PIR motion sensor"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "measure_humidity",
+    "alarm_motion",
+    "alarm_tamper",
+    "measure_temperature"
+  ],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zwave"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "zwave": {
+    "manufacturerId": 0,
+    "productTypeId": [
+      0
+    ],
+    "productId": [
+      0
+    ],
+    "zwaveAllianceProductId": 3366,
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Z-Wave Plus Lifeline"
+        }
+      }
+    }
+  }
+}
