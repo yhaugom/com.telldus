@@ -1,51 +1,34 @@
 'use strict';
 
-const { Device } = require('homey');
+const { ZwaveDevice } = require('homey-zwavedriver');
 
-class MyDevice extends Device {
+class TelldusPetImmunePIRSensor14279 extends ZwaveDevice {
 
   /**
    * onInit is called when the device is initialized.
    */
-  async onInit() {
-    this.log('MyDevice has been initialized');
+  async onNodeInit({ node }) {
+    try {
+      node.log('Telldus Pet Immune PIR motion sensor initialized.');
+      node.enableDebug();
+      node.printNode();
+  
+      node.registerCapability('alarm_battery', 'BATTERY');
+      node.registerCapability('alarm_motion', 'MOTION');
+      node.registerCapability('alarm_tamper', 'TAMPER');
+      node.registerCapability('measure_humidity', 'HUMIDITY');
+      node.registerCapability('measure_temperature', 'TEMPERATURE');
+    } catch (error) {
+      node.error('An error occurred during initialization:', error);
+    }
   }
-
+  
   /**
    * onAdded is called when the user adds the device, called just after pairing.
    */
-  async onAdded() {
-    this.log('MyDevice has been added');
+  async onAdded({ node }) {
+    node.log('Telldus Pet Immune PIR motion sensor added.');
   }
-
-  /**
-   * onSettings is called when the user updates the device's settings.
-   * @param {object} event the onSettings event data
-   * @param {object} event.oldSettings The old settings object
-   * @param {object} event.newSettings The new settings object
-   * @param {string[]} event.changedKeys An array of keys changed since the previous version
-   * @returns {Promise<string|void>} return a custom message that will be displayed
-   */
-  async onSettings({ oldSettings, newSettings, changedKeys }) {
-    this.log('MyDevice settings where changed');
-  }
-
-  /**
-   * onRenamed is called when the user updates the device's name.
-   * This method can be used this to synchronise the name to the device.
-   * @param {string} name The new name
-   */
-  async onRenamed(name) {
-    this.log('MyDevice was renamed');
-  }
-
-  /**
-   * onDeleted is called when the user deleted the device.
-   */
-  async onDeleted() {
-    this.log('MyDevice has been deleted');
-  }
-
 }
 
-module.exports = MyDevice;
+module.exports = TelldusPetImmunePIRSensor14279;

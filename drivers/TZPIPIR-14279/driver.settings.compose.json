@@ -1,12 +1,14 @@
 [
   {
-    "id": "1",
-    "value": 30,
+    "id": "TEMP_HUMID_REPORT",
+    "value": 1800,
     "label": {
-      "en": "Temperature and Humidity Auto Report period setting"
+      "en": "Temperature and Humidity Auto Report period setting.",
+      "no": "Innstilling for automatisk rapporteringsperiode for temperatur og fuktighet."
     },
     "hint": {
-      "en": "The parameter adjusts report time of temperature and humidity report."
+      "en": "The parameter adjusts report time, in seconds, of temperature and humidity report. Default value is 1800 seconds (30 min).",
+      "no": "Parameteren justerer rapporteringstiden, i sekunder, for temperatur- og fuktighetsrapport. Standardverdi er 1800 sekunder (30 min)."
     },
     "zwave": {
       "index": 1,
@@ -19,13 +21,15 @@
     "type": "number"
   },
   {
-    "id": "2",
-    "value": 15,
+    "id": "RE_TRIGGER_INT",
+    "value": 180,
     "label": {
-      "en": "Re-trigger Interval Setting (for PIR sensor only)"
+      "en": "Re-trigger Interval Setting (for PIR sensor only)",
+      "no": "Innstilling for re-trigger-intervall (kun for PIR-sensor)"
     },
     "hint": {
-      "en": "The parameter adjusts the sleep period after the detector has been triggered. No response will be made during this interval if a movement is presented. Longer re-trigger interval will result in longer battery life.\r\n"
+      "en": "The parameter adjusts the sleep period in seconds after the detector has been triggered. No response will be made during this interval if a movement is presented. Longer re-trigger interval will result in longer battery life. Default value is 180 seconds.",
+      "no": "Parameteren justerer søvnperioden i sekunder etter at detektoren har blitt utløst. Det vil ikke bli gitt noe respons i løpet av dette intervallet hvis en bevegelse blir oppdaget. Lengre re-trigger-intervall vil resultere i lengre batterilevetid. Standardverdi er 180 sekunder."
     },
     "zwave": {
       "index": 2,
@@ -38,13 +42,15 @@
     "type": "number"
   },
   {
-    "id": "3",
+    "id": "TRIGGER_OFF_INT",
     "value": 15,
     "label": {
-      "en": "Trigger Off Interval Setting"
+      "en": "Trigger Off Interval Setting",
+      "no": "Innstilling for Trigger Off-intervall"
     },
     "hint": {
-      "en": "This controls how long the connected lighting will stay on after the motion is detected This is useful for Group 2 associations where the detector is connected directly to another device such as smartplugs."
+      "en": "This controls how long, in seconds, the connected lighting will stay on after the motion is detected This is useful for Group 2 associations where the detector is connected directly to another device such as smartplugs. Default value is 15 seconds.",
+      "no": "Dette kontrollerer hvor lenge, i sekunder, den tilkoblede belysningen vil være på etter at bevegelsen er oppdaget. Dette er nyttig for gruppe 2-assosiasjoner der detektoren er direkte tilkoblet en annen enhet, som for eksempel smartplugger. Standardverdi er 15 sekunder."
     },
     "zwave": {
       "index": 3,
