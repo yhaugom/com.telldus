@@ -37,12 +37,12 @@
     "id": "low_battery",
     "value": 20,
     "label": {
-      "en": "Level of low battery alarm",
-      "no": "Nivå for alarm for lavt batteri. Default value is 20"
+      "en": "Level of low battery alarm.",
+      "no": "Nivå for alarm for lavt batteri."
     },
     "hint": {
       "en": "This parameter defines a battery level as the “low battery”.",
-      "no": "Denne verdien setter et nivå for når batterivarsel skal aktiveres. Standardverdi er 20."
+      "no": "Denne verdien setter et nivå for når batterivarsel skal aktiveres."
     },
     "zwave": {
       "index": 32,

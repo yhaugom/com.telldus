@@ -58,7 +58,7 @@
     },
     "unlearnmode": {
       "instruction": {
-        "en": "Press the button on the device three times fast. The device will be reset/removed from the Z­-wave network, and ready for inclusion."
+        "en": "Press the button on the device three times fast. The device will be reset/removed from the Z-wave network, and ready for inclusion."
       }
     }
   },
