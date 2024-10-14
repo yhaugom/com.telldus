@@ -56,13 +56,13 @@
   "tags": {
     "en": [
       "door sensor",
-      " window sensor",
-      " power plug"
+      "window sensor",
+      "power plug"
     ],
     "no": [
       "dørsensor",
-      " vindussensor",
-      " strømplugg"
+      "vindussensor",
+      "strømplugg"
     ]
   },
   "platforms": [
