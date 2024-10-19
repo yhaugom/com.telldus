@@ -1,16 +1,16 @@
 {
   "id": "TZPIPIR-14279",
   "name": {
-    "en": "Pet immune PIR motion sensor"
+    "en": "Pet immune PIR motion sensor",
+    "no": "Kjæledyrimmun PIR bevegelsessensor"
   },
   "class": "sensor",
   "capabilities": [
-    "alarm_battery",
     "measure_humidity",
+    "measure_temperature",
     "alarm_motion",
     "alarm_tamper",
-    "measure_temperature",
-    ""
+    "alarm_battery"
   ],
   "platforms": [
     "local"
@@ -31,16 +31,75 @@
     "productId": [
       4
     ],
+    "learnmode": {
+      "image": "/drivers/TZPIPIR-14279/assets/learnmode.svg",
+      "instruction": {
+        "en": "Press the learn key 3 times within 1.5 seconds to put the sensor into inclusion mode.",
+        "no": "Trykk på inkluderingsknappen 3 ganger innen 1.5 sekunder for å aktivere inkluderingsmodus."
+      }
+    },
+    "unlearnmode": {
+      "image": "/drivers/TZPIPIR-14279/assets/unlearnmode.svg",
+      "instruction": {
+        "en": "Press the learn key 3 times within 1.5 seconds to remove the sensor from the network.",
+        "no": "Trykk på inkluderingsknappen 3 ganger innen 1.5 sekunder for å fjerne sensoren fra nettet."
+      }
+    },
     "zwaveAllianceProductId": 3366,
+    "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/3366/SP815%20user%20manual_05102019-A501112752R01.pdf",
+    "imageRemotePath": "https://products.z-wavealliance.org/ProductImages/ProductImage?prod=3366&which=21",
     "associationGroups": [
       1
     ],
     "associationGroupsOptions": {
       "1": {
-        "hint": {
-          "en": "Z-Wave Plus Lifeline"
+        "type": "number",
+        "label": {
+          "en": "Temperature and Humidity Auto Report period setting",
+          "no": "Innstilling for automatisk rapporteringsperiode for temperatur og fuktighet"
+        },
+        "value": 1800,
+        "min": 1,
+        "max": 14400,
+        "units": {
+          "en": "minutes",
+          "no": "minutter"
+        }
+      },
+      "2": {
+        "type": "number",
+        "label": {
+          "en": "Re-trigger Interval Setting (for PIR sensor only)",
+          "no": "Innstilling for re-trigger-intervall (kun for PIR-sensor)"
+        },
+        "value": 180,
+        "min": 10,
+        "max": 3600,
+        "units": {
+          "en": "seconds",
+          "no": "sekunder"
+        }
+      },
+      "3": {
+        "type": "number",
+        "label": {
+          "en": "Trigger Off Interval Setting",
+          "no": "Innstilling for deaktivering av bevegelsesalarm"
+        },
+        "value": 15,
+        "min": 10,
+        "max": 3600,
+        "units": {
+          "en": "seconds",
+          "no": "sekunder"
         }
       }
     }
+  },
+  "imageRemotePath": "",
+  "energy": {
+    "batteries": [
+      "CR123A"
+    ]
   }
 }

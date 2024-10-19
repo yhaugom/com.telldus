@@ -4,11 +4,11 @@
   "description": "Telldus Z-wave support for Athom Homey.",
   "main": "app.js",
   "dependencies": {
+    "got": "^14.4.3",
+    "homey": "^2.0.6",
     "homey-meshdriver": "^1.3.24",
-    "homey-zwavedriver": "^1.0.4"
-  },
-  "devDependencies": {
-    "homey": "^2.0.6"
+    "homey-zwavedriver": "^1.0.4",
+    "sharp": "^0.33.5"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

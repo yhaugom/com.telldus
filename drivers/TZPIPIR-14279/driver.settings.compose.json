@@ -16,7 +16,7 @@
     },
     "attr": {
       "min": 1,
-      "max": 1440
+      "max": 14400
     },
     "type": "number"
   },
@@ -49,7 +49,7 @@
       "no": "Innstilling for Trigger Off-intervall"
     },
     "hint": {
-      "en": "This controls how long, in seconds, the connected lighting will stay on after the motion is detected This is useful for Group 2 associations where the detector is connected directly to another device such as smartplugs. Default value is 15 seconds.",
+      "en": "This controls how long, in seconds, the connected lighting will stay on after the motion is detected. This is useful for Group 2 associations where the detector is connected directly to another device such as smartplugs. Default value is 15 seconds.",
       "no": "Dette kontrollerer hvor lenge, i sekunder, den tilkoblede belysningen vil være på etter at bevegelsen er oppdaget. Dette er nyttig for gruppe 2-assosiasjoner der detektoren er direkte tilkoblet en annen enhet, som for eksempel smartplugger. Standardverdi er 15 sekunder."
     },
     "zwave": {
