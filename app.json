@@ -515,7 +515,7 @@
       "id": "TZPIPIR-14279",
       "name": {
         "en": "Pet immune PIR motion sensor",
-        "no": "Kjæledyrimmun PIR bevegelsessensor"
+        "no": "Kjæledyrimmun bevegelsessensor"
       },
       "class": "sensor",
       "capabilities": [
