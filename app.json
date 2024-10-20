@@ -591,6 +591,10 @@
             "size": 2,
             "value": 15
           }
+        ],
+        "securityClasses": [
+          "S2_UNAUTHENTICATED",
+          "S2_AUTHENTICATED"
         ]
       },
       "imageRemotePath": "https://products.z-wavealliance.org/ProductImages/ProductImage?prod=3366&which=21",
