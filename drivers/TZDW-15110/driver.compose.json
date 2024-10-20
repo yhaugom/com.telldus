@@ -6,6 +6,7 @@
   "class": "sensor",
   "capabilities": [
     "measure_battery",
+    "alarm_battery",
     "alarm_contact",
     "alarm_tamper"
   ],
@@ -38,7 +39,7 @@
       }
     },
     "associationGroups": [
-      1
+      1,2
     ],
     "associationGroupsOptions": {
       "1": {
@@ -49,8 +50,8 @@
       },
       "2": {
         "hint": {
-          "en": "Door Sensor will send Basic Set command to the associated nodes when the sensor alarm is triggered (open/close).",
-          "no": "Dørsensor vil sende Basic Set kommando til enheter i assosiasjonsgruppe 2 når sensor åpnes eller lukkes."
+          "en": "Door Sensor will send Basic Set command to the associated nodes (max 5) when the sensor alarm is triggered (open/close).",
+          "no": "Dørsensor vil sende Basic Set kommando til enheter (maksimalt 5) i assosiasjonsgruppe 2 når sensor åpnes eller lukkes."
         }
       }
     }

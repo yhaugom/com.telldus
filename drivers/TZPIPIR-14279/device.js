@@ -14,6 +14,7 @@ class TelldusPetImmunePIRSensor14279 extends ZwaveDevice {
       node.printNode();
   
       node.registerCapability('alarm_battery', 'BATTERY');
+      node.registerCapability('meassure_battery', 'BATTERY');
       node.registerCapability('alarm_motion', 'MOTION');
       node.registerCapability('alarm_tamper', 'TAMPER');
       node.registerCapability('measure_humidity', 'HUMIDITY');
