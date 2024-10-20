@@ -1,3 +1,3 @@
-With this app you can add and control Z-wave devices from Telldus. 
+Stay in control of your home's activity for enhanced comfort and safety.
 
-433MHz-devices are not supported. Please look for a 433MHz-specific app in the Homey App Store, if you need it.
+With Telldus devices, you can effortlessly manage your home environment. Automatically turn on lights when doors or windows open, ensuring both safety and convenience. Receive instant alerts about any unusual activity, keeping you informed no matter where you are. Telldus empowers you to create a secure and comfortable living space.

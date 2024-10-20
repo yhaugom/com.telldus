@@ -10,7 +10,8 @@
     "measure_temperature",
     "alarm_motion",
     "alarm_tamper",
-    "alarm_battery"
+    "alarm_battery",
+    "measure_battery"
   ],
   "platforms": [
     "local"
@@ -24,13 +25,14 @@
     "xlarge": "/drivers/TZPIPIR-14279/assets/images/xlarge.png"
   },
   "zwave": {
-    "manufacturerId": 0,
+    "manufacturerId": 60,
     "productTypeId": [
       1
     ],
     "productId": [
       4
     ],
+    "wakeUpInterval": 14400,
     "learnmode": {
       "image": "/drivers/TZPIPIR-14279/assets/learnmode.svg",
       "instruction": {
@@ -39,64 +41,44 @@
       }
     },
     "unlearnmode": {
-      "image": "/drivers/TZPIPIR-14279/assets/unlearnmode.svg",
+      "image": "/drivers/TZPIPIR-14279/assets/learnmode.svg",
       "instruction": {
-        "en": "Press the learn key 3 times within 1.5 seconds to remove the sensor from the network.",
-        "no": "Trykk på inkluderingsknappen 3 ganger innen 1.5 sekunder for å fjerne sensoren fra nettet."
+        "en": "Press the learn key 3 times within 1.5 seconds to reset/remove the sensor from the network.",
+        "no": "Trykk på inkluderingsknappen 3 ganger innen 1.5 sekunder for å nullstille/fjerne sensoren fra nettverket."
       }
     },
     "zwaveAllianceProductId": 3366,
     "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=MarketCertificationFiles/3366/SP815%20user%20manual_05102019-A501112752R01.pdf",
     "imageRemotePath": "https://products.z-wavealliance.org/ProductImages/ProductImage?prod=3366&which=21",
-    "associationGroups": [
-      1
-    ],
+    "associationGroups": [1,2],
     "associationGroupsOptions": {
-      "1": {
-        "type": "number",
-        "label": {
-          "en": "Temperature and Humidity Auto Report period setting",
-          "no": "Innstilling for automatisk rapporteringsperiode for temperatur og fuktighet"
-        },
-        "value": 1800,
-        "min": 1,
-        "max": 14400,
-        "units": {
-          "en": "minutes",
-          "no": "minutter"
-        }
-      },
       "2": {
-        "type": "number",
-        "label": {
-          "en": "Re-trigger Interval Setting (for PIR sensor only)",
-          "no": "Innstilling for re-trigger-intervall (kun for PIR-sensor)"
-        },
-        "value": 180,
-        "min": 10,
-        "max": 3600,
-        "units": {
-          "en": "seconds",
-          "no": "sekunder"
-        }
-      },
-      "3": {
-        "type": "number",
-        "label": {
-          "en": "Trigger Off Interval Setting",
-          "no": "Innstilling for deaktivering av bevegelsesalarm"
-        },
-        "value": 15,
-        "min": 10,
-        "max": 3600,
-        "units": {
-          "en": "seconds",
-          "no": "sekunder"
+        "hint": {
+          "en": "PIR Control - The sensor will send control commands (on/off) to maximum 4 associated devices.",
+          "no": "PIR-kontroll - Sensoren vil sende kontrollkommandoer (på/av) til maksimalt 4 tilknyttede enheter."
         }
       }
-    }
+    },
+    "defaultConfiguration": [
+      {
+        "id": 1,
+        "size": 2,
+        "value": 1800
+      },
+      {
+        "id": 2,
+        "size": 2,
+        "value": 180
+      },
+      {
+        "id": 3,
+        "size": 2,
+        "value": 15
+      }
+    ]
+
   },
-  "imageRemotePath": "",
+  "imageRemotePath": "https://products.z-wavealliance.org/ProductImages/ProductImage?prod=3366&which=21",
   "energy": {
     "batteries": [
       "CR123A"

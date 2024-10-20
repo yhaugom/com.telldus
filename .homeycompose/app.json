@@ -2,16 +2,17 @@
   "id": "com.telldus",
   "sdk": 3,
   "name": {
-    "en": "Telldus Z-wave"
+    "en": "Telldus Z-wave",
+    "no": "Telldus Z-wave"
   },
   "description": {
-    "en": "Adds support for Telldus Z-wave devices",
-    "no": "Lar deg bruke Z-wave-enheter fra Telldus."
+    "en": "Experience the Smart Home",
+    "no": "Opplev det smarte hjemmet"
   },
   "category": "appliances",
   "version": "1.3.3",
   "compatibility": ">=5.0.0",
-  "brandColor": "#be5c2e",
+  "brandColor": "#000000",
   "author": {
     "name": "Yngve Bøe Haugom",
     "email": "yngve_haugom@hotmail.com"
@@ -57,12 +58,14 @@
     "en": [
       "door sensor",
       "window sensor",
-      "power plug"
+      "power plug",
+      "motion sensor"
     ],
     "no": [
       "dørsensor",
       "vindussensor",
-      "strømplugg"
+      "strømplugg",
+      "bevegelsessensor"
     ]
   },
   "platforms": [
