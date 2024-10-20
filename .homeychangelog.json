@@ -46,5 +46,8 @@
   },
   "1.4.0": {
     "en": "Added new device Pet Immune PIR sensor, and updated app profile."
+  },
+  "1.4.1": {
+    "en": "Added new device, Pet Immune PIR sensor, and updated app profile."
   }
 }
