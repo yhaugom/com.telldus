@@ -10,7 +10,6 @@
     "measure_temperature",
     "alarm_motion",
     "alarm_tamper",
-    "alarm_battery",
     "measure_battery"
   ],
   "platforms": [

@@ -7,28 +7,27 @@ class TelldusPetImmunePIRSensor14279 extends ZwaveDevice {
   /**
    * onInit is called when the device is initialized.
    */
-  async onNodeInit({ node }) {
+  async onNodeInit() {
     try {
-      node.log('Telldus Pet Immune PIR motion sensor initialized.');
-      node.enableDebug();
-      node.printNode();
+      this.enableDebug();
+      this.printNode();
   
-      node.registerCapability('alarm_battery', 'BATTERY');
-      node.registerCapability('meassure_battery', 'BATTERY');
-      node.registerCapability('alarm_motion', 'MOTION');
-      node.registerCapability('alarm_tamper', 'TAMPER');
-      node.registerCapability('measure_humidity', 'HUMIDITY');
-      node.registerCapability('measure_temperature', 'TEMPERATURE');
+      this.registerCapability('measure_battery', 'BATTERY');
+      this.registerCapability('alarm_motion', 'NOTIFICATION');
+      this.registerCapability('alarm_tamper', 'NOTIFICATION');
+      this.registerCapability('measure_humidity', 'SENSOR_MULTILEVEL');
+      this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL');
+      this.log('Telldus Pet Immune PIR motion sensor initialized.');
     } catch (error) {
-      node.error('An error occurred during initialization:', error);
+      this.error('An error occurred during initialization:', error);
     }
   }
   
   /**
    * onAdded is called when the user adds the device, called just after pairing.
    */
-  async onAdded({ node }) {
-    node.log('Telldus Pet Immune PIR motion sensor added.');
+  async onAdded() {
+    this.log('Telldus Pet Immune PIR motion sensor added.');
   }
 }
 
