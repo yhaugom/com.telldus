@@ -392,7 +392,6 @@
       "class": "sensor",
       "capabilities": [
         "measure_battery",
-        "alarm_battery",
         "alarm_contact",
         "alarm_tamper"
       ],
@@ -525,7 +524,6 @@
         "measure_temperature",
         "alarm_motion",
         "alarm_tamper",
-        "alarm_battery",
         "measure_battery"
       ],
       "platforms": [
