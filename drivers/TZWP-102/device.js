@@ -9,15 +9,42 @@ class TelldusTZWP102 extends ZwaveDevice {
 		
 		this.registerCapability('onoff','BASIC');
 		this.registerCapability('onoff','SWITCH_BINARY');
-		this.registerCapability('meter_power','METER');
-		this.registerCapability('measure_power','METER');
+
+		// Parsers for the scales we use (kWh, W) to prevent undefined capability updates for METER reports
+		const extractMeterValue = (report, expectedScaleBits) => {
+			if (!report || !report.Properties2 || typeof report.Properties2['Scale bits 10'] !== 'number') return null;
+			if (report.Properties2['Scale bits 10'] !== expectedScaleBits) return null;
+			let rawValue = report['Meter Value (Parsed)'] ?? report['Meter Value'] ?? report['Previous Meter Value (Parsed)'];
+			if (rawValue && typeof rawValue === 'object' && rawValue.type === 'Buffer' && Array.isArray(rawValue.data)) {
+				const size = report.Properties2.Size || rawValue.data.length;
+				const precision = typeof report.Properties2.Precision === 'number' ? report.Properties2.Precision : 0;
+				const bytes = rawValue.data.slice(0, size);
+				let intVal = 0;
+				for (let i = 0; i < bytes.length; i++) intVal = (intVal << 8) | (bytes[i] & 0xFF);
+				rawValue = intVal / Math.pow(10, precision);
+			}
+			const num = typeof rawValue === 'number' ? rawValue : parseFloat(rawValue);
+			return Number.isFinite(num) ? num : null;
+		};
+
+		this.registerCapability('meter_power','METER', {
+			report: 'METER_REPORT',
+			reportParser: report => extractMeterValue(report, 0), // 0 = kWh
+			getOpts: { getOnStart: true }
+		});
+
+		this.registerCapability('measure_power','METER', {
+			report: 'METER_REPORT',
+			reportParser: report => extractMeterValue(report, 2), // 2 = W
+			getOpts: { getOnStart: true }
+		});
 
 	    this.registerCapabilityListener('button.reset_meter', async () => 
 		    {
 		    	// Register button. Maintenance action button was pressed, return a promise
 				if (this.node && this.node.CommandClass.COMMAND_CLASS_METER) 
 				{
-					this.log('Maintainance button METER_RESET pushed.');
+					this.log('Maintenance button METER_RESET pushed.');
 					return await this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({});
 
 				}
