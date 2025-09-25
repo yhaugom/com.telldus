@@ -29,13 +29,41 @@ class TelldusTZWP102 extends ZwaveDevice {
 
 		this.registerCapability('meter_power','METER', {
 			report: 'METER_REPORT',
-			reportParser: report => extractMeterValue(report, 0), // 0 = kWh
+			reportParser: report => {
+				const value = extractMeterValue(report, 0); // 0 = kWh
+				if (value == null) return null;
+				const last = this.getCapabilityValue('meter_power');
+				if (typeof last === 'number' && Number.isFinite(last)) {
+					// strictly ignore any decreasing values unless it's a clear reset
+					if (value < last) {
+						if (value <= 0.1) return value; // accept reset to near 0
+						this.log('Ignoring decreasing kWh value', { last, value });
+						return null;
+					}
+				}
+				return value;
+			},
 			getOpts: { getOnStart: true }
 		});
 
 		this.registerCapability('measure_power','METER', {
 			report: 'METER_REPORT',
 			reportParser: report => extractMeterValue(report, 2), // 2 = W
+			getOpts: { getOnStart: true }
+		});
+
+		// Add measure_current capability if it doesn't exist on the device
+		if (!this.hasCapability('measure_current')) {
+			await this.addCapability('measure_current');
+		}
+
+		// Optional: current in A (Scale = 5 → Scale bit 2 = true, Scale bits 10 = 1)
+		this.registerCapability('measure_current','METER', {
+			report: 'METER_REPORT',
+			reportParser: report => {
+				if (!report || !report.Properties1 || report.Properties1['Scale bit 2'] !== true) return null;
+				return extractMeterValue(report, 1); // bits10 = 1; combined with Scale bit 2 = true → A
+			},
 			getOpts: { getOnStart: true }
 		});
 
