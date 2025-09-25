@@ -55,5 +55,8 @@
   },
   "1.4.3": {
     "en": "Bug fixes after adding new device. Pet immune PIR sensor."
+  },
+  "1.5.0": {
+    "en": "Added Current (A) insight for live amperage. Energy (kWh) is now strictly cumulative; no more drops except after a real reset. Improved meter report handling for more stable and accurate readings. No action needed: existing devices get Current (A) automatically after app restart."
   }
 }
