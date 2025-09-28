@@ -1,7 +1,8 @@
 {
   "id": "TZDW-15110",
   "name": {
-    "en": "Door sensor"
+    "en": "Door/window sensor",
+    "no": "Dør/vindusensor"
   },
   "class": "sensor",
   "capabilities": [

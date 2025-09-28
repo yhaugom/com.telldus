@@ -1,0 +1,40 @@
+{
+  "id": "current_power",
+  "title": {
+    "en": "The current power usage is",
+    "no": "Nåværende effektforbruk er"
+  },
+  "titleFormatted": {
+    "en": "The current power usage of [[device]] is [[watt]]W with errormargin [[errormargin]]%",
+    "no": "Nåværende effektforbruk for [[device]] er [[watt]]W med feilmargin på [[errormargin]]%"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "capabilities=measure_power"
+    },
+    {
+      "name": "watt",
+      "type": "number",
+      "min": 0,
+      "max": 2300,
+      "step": 10,
+      "placeholder": {
+        "en": "Set a value in watts",
+        "no": "Skriv verdi i watt"
+      }
+    },
+    {
+      "name": "errormargin",
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "placeholder": {
+        "en": "Set error margin in %",
+        "no": "Feilmargin i %"
+      }
+    }
+  ]
+}

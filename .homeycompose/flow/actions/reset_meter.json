@@ -1,0 +1,22 @@
+{
+  "id": "reset_meter",
+  "title": {
+    "en": "Reset meter values",
+    "no": "Nullstil målerdata"
+  },
+  "titleFormatted": {
+    "en": "Reset meter values for [[device]]",
+    "no": "Nullstil målerdata for [[device]]"
+  },
+  "hint": {
+    "en": "Reset the accumulated power usage (kWh). Can not be reversed.",
+    "no": "Nullstill akkumulert strømforbruk (kWh). Kan ikke angres."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "capabilities=meter_power"
+    }
+  ]
+}

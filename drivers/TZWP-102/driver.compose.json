@@ -1,22 +1,26 @@
 {
   "name": {
-    "en": "Plug-in Switch Mini"
+    "en": "Plug-in Switch Mini",
+    "no": "Strømplugg Mini"
   },
   "class": "socket",
   "capabilities": [
     "onoff",
     "meter_power",
     "measure_power",
+    "measure_current",
     "button.reset_meter"
   ],
   "capabilitiesOptions": {
     "button.reset_meter": {
       "maintenanceAction": true,
       "title": {
-        "en": "Reset power meter"
+        "en": "Reset power meter",
+        "no": "Nullstille strømmåler"
       },
       "desc": {
-        "en": "Reset the accumulated power usage (kWh), note that this can not be reversed."
+        "en": "Reset the accumulated power usage (kWh), note that this can not be reversed.",
+        "no": "Nullstille akkumulert strømforbruk (kWh), merk at dette kan ikke angres."
       }
     }
   },
@@ -47,18 +51,21 @@
     "associationGroupsOptions": {
       "1": {
         "hint": {
-          "en": "Z-Wave Plus Lifeline - Plug status - Max 1 node"
+          "en": "Z-Wave Plus Lifeline - Plug status - Max 1 node",
+          "no": "Z-Wave Plus Lifeline - Strømpluggstatus - Maksimalt 1 node"
         }
       },
       "2": {
         "hint": {
-          "en": "The plug will send Basic Set control signals to the nodes in this group whenever the status of the plug changes. This will work like a master/slave solution. Maximum 10 nodes."
+          "en": "The plug will send Basic Set control signals to the nodes in this group whenever the status of the plug changes. This will work like a master/slave solution. Maximum 10 nodes.",
+          "no": "Strømpluggen vil sende Basic Set (på/av) kontrollsignaler til noder i denne gruppen når statusen til strømpluggen endres. Dette vil fungere som en master/slave-løsning. Maksimalt 10 noder."
         }
       }
     },
     "unlearnmode": {
       "instruction": {
-        "en": "Press the button on the device three times fast. The device will be reset/removed from the Z-wave network, and ready for inclusion."
+        "en": "Press the button on the device three times fast. The device will be reset/removed from the Z-wave network, and ready for inclusion.",
+        "no": "Trykk på knappen på enheten tre ganger raskt. Enheten vil bli nullstilt/fjernet fra Z-wave-nettverket, og klar for inkludering."
       }
     }
   },
@@ -77,10 +84,12 @@
         "signed": false
       },
       "label": {
-        "en": "Configuration lock"
+        "en": "Configuration lock",
+        "no": "Konfigurasjonslås"
       },
       "hint": {
-        "en": "Enable/disable the configuration command. \n0 = Unlocked (default).\n1 = Locked"
+        "en": "Enable/disable the configuration command. \n0 = Unlocked (default).\n1 = Locked",
+        "no": "Aktiver/deaktiver konfigurasjonskommandoen. \n0 = Låst (standard).\n1 = Låst"
       }
     },
     {
@@ -97,10 +106,12 @@
         "signed": false
       },
       "label": {
-        "en": "Overcurrent protection."
+        "en": "Overcurrent protection.",
+        "no": "Overstrømsbeskyttelse."
       },
       "hint": {
-        "en": "Overcurrent protection.\n0 = Disabled.\n1 = Enabled (default)."
+        "en": "Overcurrent protection.\n0 = Disabled.\n1 = Enabled (default).",
+        "no": "Overstrømsbeskyttelse.\n0 = Av.\n1 = På (standard)."
       }
     },
     {
@@ -117,10 +128,12 @@
         "signed": false
       },
       "label": {
-        "en": "State after power failure"
+        "en": "State after power failure",
+        "no": "Tilstand etter strømavbrudd"
       },
       "hint": {
-        "en": "Decide what the plug should do after power failure.\n0 = Remember status (default).\n1 = Always on.\n2 = Always off."
+        "en": "Decide what the plug should do after power failure.\n0 = Remember status (default).\n1 = Always on.\n2 = Always off.",
+        "no": "Bestem hva strømpluggen skal gjøre etter strømavbrudd. \n0 = Husk status (standard).\n1 = Alltid på.\n2 = Alltid av."
       }
     },
     {
@@ -137,10 +150,12 @@
         "signed": false
       },
       "label": {
-        "en": "Notification when load status change"
+        "en": "Notification when load status change",
+        "no": "Notifikasjon når lasttilstand endres"
       },
       "hint": {
-        "en": "Decide the behaviour for notification when load status is updated. \n0 = Disabled.\n1 = Send Basic report (ON/OFF). (default)\n2 = Send Basic report (ON/OFF) only when load status is not changed by Z-WAVE command."
+        "en": "Decide the behaviour for notification when load status is updated. \n0 = Disabled.\n1 = Send Basic report (ON/OFF). (default)\n2 = Send Basic report (ON/OFF) only when load status is not changed by Z-WAVE command.",
+        "no": "Bestem oppførselen for notifikasjon når lasttilstand oppdateres. \n0 = Av.\n1 = Send Basic rapport (PÅ/AV). (standard)\n2 = Send Basic rapport (PÅ/AV) bare når lasttilstanden ikke endres av Z-WAVE-kommando."
       }
     },
     {
@@ -157,10 +172,12 @@
         "signed": false
       },
       "label": {
-        "en": "LED load indication"
+        "en": "LED load indication",
+        "no": "LED-lastindikasjon"
       },
       "hint": {
-        "en": "0 = The LED status follows the load change.\n1 = When operating the load, the LED lights for 5 seconds and then turns off."
+        "en": "0 = The LED status follows the load change.\n1 = When operating the load, the LED lights for 5 seconds and then turns off.",
+        "no": "0 = LED-status følger lastendringen.\n1 = Når lasten slås på lyser LED-indikatoren i 5 sekunder og deretter slås den av."
       }
     },
     {
@@ -177,10 +194,12 @@
         "signed": false
       },
       "label": {
-        "en": "Wattage report threshold (W)"
+        "en": "Wattage report threshold (W)",
+        "no": "Terskel for wattrapport (W)"
       },
       "hint": {
-        "en": "The value here represents the minimum change in wattage (W), since the last report, for a new report to be sent."
+        "en": "The value here represents the minimum change in wattage (W), since the last report, for a new report to be sent.",
+        "no": "Verdien her representerer den minste endringen i watt (W), siden siste rapport, som skal til før en ny rapport sendes."
       }
     },
     {
@@ -196,10 +215,12 @@
         "size": 1
       },
       "label": {
-        "en": "Wattage report threshold (%)"
+        "en": "Wattage report threshold (%)",
+        "no": "Terskel for wattrapport (%)"
       },
       "hint": {
-        "en": "The value here represents minimum change in wattage percentage, since the last report, for a meter report (W) to be sent. 0 - Disabled."
+        "en": "The value here represents minimum change in wattage percentage, since the last report, for a meter report (W) to be sent. 0 - Disabled.",
+        "no": "Verdien her representerer den minste endringen i wattprosent, siden siste rapport, som skal til før en ny rapport (W) sendes. 0 - Av."
       }
     },
     {
@@ -216,10 +237,12 @@
         "signed": false
       },
       "label": {
-        "en": "Power (W) report timeout (s)"
+        "en": "Power (W) report timeout (s)",
+        "no": "Tidsintervall for effektrapport (s)"
       },
       "hint": {
-        "en": "The interval time in seconds between sending power report (watt) to Homey. 0 Disabled.\nValid values are 5 - 2678400."
+        "en": "The interval time in seconds between sending power report (watt) to Homey. 0 Disabled.\nValid values are 5 - 2678400.",
+        "no": "Tidsintervall i sekunder mellom hver sending av effektrapport (watt) til Homey. 0 - Av.\nGyldige verdier er 5 - 2678400."
       }
     },
     {
@@ -236,10 +259,12 @@
         "signed": false
       },
       "label": {
-        "en": "Energy (KWh) report timeout (s)"
+        "en": "Energy (KWh) report timeout (s)",
+        "no": "Tidsintervall (s) for energirapport (KWh)"
       },
       "hint": {
-        "en": "The interval time in seconds between sending energy report (KWh) to Homey. 0 - Disabled.\nValid values are 5 - 2678400."
+        "en": "The interval time in seconds between sending energy report (KWh) to Homey. 0 - Disabled.\nValid values are 5 - 2678400.",
+        "no": "Tidsintervall i sekunder mellom hver sending av energirapport (KWh) til Homey. 0 - Av.\nGyldige verdier er 5 - 2678400."
       }
     },
     {
@@ -256,10 +281,12 @@
         "signed": false
       },
       "label": {
-        "en": "Voltage (V) report timeout (s)"
+        "en": "Voltage (V) report timeout (s)",
+        "no": "Tidsintervall (s) for spenningtrapport (V)"
       },
       "hint": {
-        "en": "The interval time in seconds between sending voltage report (V) to Homey. 0 - Disabled.\nValid values are 5 - 2678400."
+        "en": "The interval time in seconds between sending voltage report (V) to Homey. 0 - Disabled.\nValid values are 5 - 2678400.",
+        "no": "Tidsintervall i sekunder mellom hver sending av spenningtrapport (V) til Homey. 0 - Av.\nGyldige verdier er 5 - 2678400."
       }
     },
     {
@@ -276,10 +303,12 @@
         "signed": false
       },
       "label": {
-        "en": "Current (A) report timeout (s)"
+        "en": "Current (A) report timeout (s)",
+        "no": "Tidsintervall (s) for strømtrapport (A)"
       },
       "hint": {
-        "en": "The interval time in seconds between sending current report (A) to Homey. 0 - Disabled.\nValid values are 5 - 2678400."
+        "en": "The interval time in seconds between sending current report (A) to Homey. 0 - Disabled.\nValid values are 5 - 2678400.",
+        "no": "Tidsintervall i sekunder mellom hver sending av strømtrapport (A) til Homey. 0 - Av.\nGyldige verdier er 5 - 2678400."
       }
     }
   ],

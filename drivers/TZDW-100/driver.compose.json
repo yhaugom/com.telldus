@@ -1,6 +1,7 @@
 {
   "name": {
-    "en": "Door/window sensor"
+    "en": "Door/window sensor",
+    "no": "Dør/vindusensor"
   },
   "class": "sensor",
   "capabilities": [
@@ -22,6 +23,12 @@
       "window sensor",
       "magnet sensor",
       "contact alarm"
+    ],
+    "no": [
+      "dørsensor",
+      "vindusensor",
+      "magnetisk sensor",
+      "kontaktalarm"
     ]
   },
   "pair": [
@@ -52,7 +59,8 @@
     "learnmode": {
       "image": "/drivers/TZDW-100/assets/learnmode.svg",
       "instruction": {
-        "en": "Automatic inclusion: \nWhen a battery is inserted, the device is in automatic inclusion mode for one minute (Network Wide Inclusion, NWI).\n For manual inclusion: \nPress the button on the device three times fast."
+        "en": "Automatic inclusion: \nWhen a battery is inserted, the device is in automatic inclusion mode for one minute (Network Wide Inclusion, NWI).\n For manual inclusion: \nPress the button on the device three times fast.",
+        "no": "Automatisk inkludering: \nNår et batteri settes inn, er enheten i automatisk inkluderingsmodus i ett minutt (Network Wide Inclusion, NWI).\n For manuell inkludering: \nTrykk på knappen på enheten tre ganger raskt."
       }
     },
     "productDocumentation": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=Manuals/1455/Quickguide_Sensor_Switch_107x153mm_PMS.pdf",
@@ -66,23 +74,27 @@
     "associationGroupsOptions": {
       "1": {
         "hint": {
-          "en": "Z-Wave Plus Lifeline"
+          "en": "Z-Wave Plus Lifeline",
+          "no": "Z-Wave Plus Lifeline"
         }
       },
       "2": {
         "hint": {
-          "en": "Sensor status\nThe sensor will send control commands to nodes in this group when the status of the sensor changes."
+          "en": "Sensor status\nThe sensor will send control commands to nodes in this group when the status of the sensor changes.",
+          "no": "Sensortilstand\nSensoren vil sende kontrollkommandoer til noder i denne gruppen når tilstanden til sensoren endres."
         }
       },
       "3": {
         "hint": {
-          "en": "Sensor status\nThe sensor will send control commands to nodes in this group when the sensor is opened only."
+          "en": "Sensor status\nThe sensor will send control commands to nodes in this group when the sensor is opened only.",
+          "no": "Sensortilstand\nSensoren vil sende kontrollkommandoer til noder i denne gruppen kun når sensoren åpnes."
         }
       }
     },
     "unlearnmode": {
       "instruction": {
-        "en": "Press the button on the device three times fast. The device will be reset/removed from the Z­-wave network, and ready for inclusion."
+        "en": "Press the button on the device three times fast. The device will be reset/removed from the Z­-wave network, and ready for inclusion.",
+        "no": "Trykk på knappen på enheten tre ganger raskt. Enheten vil bli nullstilt/fjernet fra Z­-wave-nettverket, og klar for inkludering."
       }
     }
   },
@@ -90,7 +102,8 @@
     {
       "type": "group",
       "label": {
-        "en": "Association group 2"
+        "en": "Association group 2",
+        "no": "Assosiasjonsgruppe 2"
       },
       "collapsed": true,
       "children": [
@@ -99,10 +112,12 @@
           "type": "dropdown",
           "value": "0",
           "label": {
-            "en": "Command sent"
+            "en": "Command sent",
+            "no": "Kommando sendt"
           },
           "hint": {
-            "en": "Select what type of command to be sent to nodes in association group 2. Possible values: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel."
+            "en": "Select what type of command to be sent to nodes in association group 2. Possible values: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel.",
+            "no": "Velg hvilken type kommando som skal sendes til noder i assosiasjonsgruppe 2. Mulige verdier: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel."
           },
           "zwave": {
             "index": 1,
@@ -112,25 +127,29 @@
             {
               "id": "0",
               "label": {
-                "en": "Basic"
+                "en": "Basic",
+                "no": "Basic"
               }
             },
             {
               "id": "1",
               "label": {
-                "en": "Switch Binary"
+                "en": "Switch Binary",
+                "no": "Switch Binary"
               }
             },
             {
               "id": "2",
               "label": {
-                "en": "Switch All"
+                "en": "Switch All",
+                "no": "Switch All"
               }
             },
             {
               "id": "3",
               "label": {
-                "en": "Switch Multilevel"
+                "en": "Switch Multilevel",
+                "no": "Switch Multilevel"
               }
             }
           ]
@@ -139,10 +158,12 @@
           "id": "value_assoc_group_2",
           "type": "number",
           "label": {
-            "en": "Value sent"
+            "en": "Value sent",
+            "no": "Verdi sendt"
           },
           "hint": {
-            "en": "Select the value to be sent to association group 2 when Swith Multilevel is set in above setting.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Switch Multilevel is set in configuration 1."
+            "en": "Select the value to be sent to association group 2 when Swith Multilevel is set in above setting.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Switch Multilevel is set in configuration 1.",
+            "no": "Velg verdien som skal sendes til assosiasjonsgruppe 2 når Switch Multilevel er satt i ovenstående innstilling.\nBruk 1-99 for spesifikk dim-nivå, -1 returnerer til siste verdi. \nBør kun endres når Switch Multilevel er satt i konfigurasjon 1."
           },
           "zwave": {
             "index": 2,
@@ -159,10 +180,12 @@
           "type": "checkbox",
           "value": false,
           "label": {
-            "en": "Invert signals"
+            "en": "Invert signals",
+            "no": "Inverter signaler"
           },
           "hint": {
-            "en": "When this configuration is set to inverted, an off-signal will be sent when the sensor is opened and on-signal when it's closed."
+            "en": "When this configuration is set to inverted, an off-signal will be sent when the sensor is opened and on-signal when it's closed.",
+            "no": "Når denne innstillingen er satt til invertert, vil et av-signal sendes når sensoren åpnes og et på-signal sendes når den lukkes."
           },
           "zwave": {
             "index": 3,
@@ -175,17 +198,20 @@
       "type": "group",
       "collapsed": true,
       "label": {
-        "en": "Association group 3"
+        "en": "Association group 3",
+        "no": "Assosiasjonsgruppe 3"
       },
       "children": [
         {
           "id": "command_assoc_group_3",
           "type": "dropdown",
           "label": {
-            "en": "Command sent"
+            "en": "Command sent",
+            "no": "Kommando sendt"
           },
           "hint": {
-            "en": "Select the type of command to be sent to nodes in association group 3. Possible values: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel."
+            "en": "Select the type of command to be sent to nodes in association group 3. Possible values: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel.",
+            "no": "Velg hvilken type kommando som skal sendes til noder i assosiasjonsgruppe 3. Mulige verdier: 0: Basic, 1: Switch Binary, 2: Switch All, 3: Switch Multilevel."
           },
           "zwave": {
             "index": 4,
@@ -197,25 +223,29 @@
             {
               "id": "0",
               "label": {
-                "en": "Basic"
+                "en": "Basic",
+                "no": "Basic"
               }
             },
             {
               "id": "1",
               "label": {
-                "en": "Switch Binary"
+                "en": "Switch Binary",
+                "no": "Switch Binary"
               }
             },
             {
               "id": "2",
               "label": {
-                "en": "Switch All"
+                "en": "Switch All",
+                "no": "Switch All"
               }
             },
             {
               "id": "3",
               "label": {
-                "en": "Switch Multilevel"
+                "en": "Switch Multilevel",
+                "no": "Switch Multilevel"
               }
             }
           ]
@@ -229,10 +259,12 @@
             "max": 99
           },
           "label": {
-            "en": "Value sent"
+            "en": "Value sent",
+            "no": "Verdi sendt"
           },
           "hint": {
-            "en": "Select the value to be sent to association group 3 when Swith Multilevel is set in above setting.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Swith Multilevel is set in configuration 1."
+            "en": "Select the value to be sent to association group 3 when Swith Multilevel is set in above setting.\nUse 1-99 for specific dim-level, -1 return to last value. \nShould only be changed when Swith Multilevel is set in configuration 1.",
+            "no": "Velg verdien som skal sendes til assosiasjonsgruppe 3 når Switch Multilevel er satt i ovenstående innstilling.\nBruk 1-99 for spesifikk dim-nivå, -1 returnerer til siste verdi. \nBør kun endres når Switch Multilevel er satt i konfigurasjon 1."
           },
           "zwave": {
             "index": 5,
@@ -243,10 +275,12 @@
           "id": "invert_signal_assoc_group_3",
           "type": "checkbox",
           "label": {
-            "en": "Invert signals"
+            "en": "Invert signals",
+            "no": "Inverter signaler"
           },
           "hint": {
-            "en": "When this configuration is set to inverted, an off-signal will be sent when the sensor is opened, and an on-signal when it's closed."
+            "en": "When this configuration is set to inverted, an off-signal will be sent when the sensor is opened, and an on-signal when it's closed.",
+            "no": "Når denne innstillingen er satt til invertert, vil et av-signal sendes når sensoren åpnes og et på-signal sendes når den lukkes."
           },
           "zwave": {
             "index": 6,
@@ -261,10 +295,12 @@
       "type": "checkbox",
       "value": true,
       "label": {
-        "en": "LED-Indicator"
+        "en": "LED-Indicator",
+        "no": "LED-indikator"
       },
       "hint": {
-        "en": "Select if the LED indicator shold be active or not. Turn it off to reduce the power consumption."
+        "en": "Select if the LED indicator shold be active or not. Turn it off to reduce the power consumption.",
+        "no": "Velg om LED-indikatoren skal være aktiv eller ikke. Slå den av for å redusere strøforbruket."
       },
       "zwave": {
         "index": 7,
@@ -275,10 +311,12 @@
       "id": "command_lifeline_type",
       "type": "dropdown",
       "label": {
-        "en": "Command type"
+        "en": "Command type",
+        "no": "Kommando type"
       },
       "hint": {
-        "en": "Type of command to be sent in the Lifeline. 0 - Notification, 1 - Sensor binary."
+        "en": "Type of command to be sent in the Lifeline. 0 - Notification, 1 - Sensor binary.",
+        "no": "Type of command to be sent in the Lifeline. 0 - Notification, 1 - Sensor binary."
       },
       "zwave": {
         "index": 8,
@@ -289,13 +327,15 @@
         {
           "id": "0",
           "label": {
-            "en": "Notification"
+            "en": "Notification",
+            "no": "Notifikasjon"
           }
         },
         {
           "id": "1",
           "label": {
-            "en": "Sensor binary"
+            "en": "Sensor binary",
+            "no": "Sensor binary"
           }
         }
       ]
