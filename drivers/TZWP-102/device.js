@@ -66,7 +66,24 @@ class TelldusTZWP102 extends ZwaveDevice {
 			},
 			getOpts: { getOnStart: true }
 		});
-
+	    
+	    // Register flow condition callback (for backwards compatibility)
+	    let currentPowerCondition = this.homey.flow.getConditionCard('TZWP-102_current_power');
+		if (currentPowerCondition) {
+			currentPowerCondition.registerRunListener(async (args, state) => {
+				try {
+					const power = this.getCapabilityValue('measure_power');
+					if (typeof power !== 'number') return false;
+					
+					const margin = args.watt * args.errormargin / 100;
+					return (power >= args.watt - margin) && (power < args.watt + margin);
+				} catch (error) {
+					this.error('Error in TZWP-102_current_power condition (deprecated):', error);
+					return false;
+				}
+			});
+		}
+	    
 	    this.registerCapabilityListener('button.reset_meter', async () => 
 		    {
 		    	// Register button. Maintenance action button was pressed, return a promise
@@ -81,6 +98,19 @@ class TelldusTZWP102 extends ZwaveDevice {
 		    }	
 	    );
 	    
+	    // Register flow action callback (for backwards compatibility)
+	    let resetMeterAction = this.homey.flow.getActionCard('TZWP-102_reset_meter');
+		resetMeterAction.registerRunListener(async(args, state) => 
+			{
+				if (this.node && this.node.CommandClass.COMMAND_CLASS_METER) 
+				{
+					this.log('Action card METER_RESET triggered (for backwards compatibility)');
+					return await this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({});				
+				}
+				this.log('Does not support meter resets, or not a valid node.');
+				return Promise.reject('The device could not be reset');
+		    }
+	    );
 	}
 }
 module.exports = TelldusTZWP102;

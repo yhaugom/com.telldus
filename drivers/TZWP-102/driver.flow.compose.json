@@ -1,2 +1,54 @@
 {
+  "conditions": [
+    {
+      "id": "TZWP-102_current_power",
+      "deprecated": true,
+      "title": {
+        "en": "The current power usage is",
+        "no": "Nåværende effektforbruk er"
+      },
+      "titleFormatted": {
+        "en": "The current power usage is [[watt]]W with errormargin [[errormargin]]%",
+        "no": "Nåværende effektforbruk er [[watt]]W med feilmargin på [[errormargin]]%"
+      },
+      "args": [
+        {
+          "name": "watt",
+          "type": "number",
+          "min": 0,
+          "max": 2300,
+          "step": 1,
+          "placeholder": {
+            "en": "Set a value in watts",
+            "no": "Skriv verdi i watt"
+          }
+        },
+        {
+          "name": "errormargin",
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "placeholder": {
+            "en": "Set error margin in %",
+            "no": "Feilmargin i %"
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "TZWP-102_reset_meter",
+      "deprecated": true,
+      "title": {
+        "en": "Reset meter values",
+        "no": "Nullstil målerdata"
+      },
+      "hint": {
+        "en": "Reset the accumulated power usage (kWh). Can not be reversed.",
+        "no": "Nullstill akkumulert strømforbruk (kWh). Kan ikke angres."
+      }
+    }
+  ]
 }

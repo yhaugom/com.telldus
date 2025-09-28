@@ -19,7 +19,7 @@
       "type": "number",
       "min": 0,
       "max": 2300,
-      "step": 10,
+      "step": 1,
       "placeholder": {
         "en": "Set a value in watts",
         "no": "Skriv verdi i watt"
@@ -30,7 +30,7 @@
       "type": "number",
       "min": 0,
       "max": 100,
-      "step": 10,
+      "step": 1,
       "placeholder": {
         "en": "Set error margin in %",
         "no": "Feilmargin i %"

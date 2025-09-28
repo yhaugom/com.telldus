@@ -9,6 +9,14 @@
 * [Z-wave Plug-in Switch](https://products.z-wavealliance.org/products/1542) - Plug-in Switch (French - TZWP-101)
 * [Z-wave Plug-in switch](https://products.z-wavealliance.org/products/2892) - Plug-in Switch Mini (TZWP-102)
 
+## Features
+* **Power monitoring**: Real-time power consumption (W), energy usage (kWh), and current measurement (A) for TZWP-102
+* **Flow cards**: 
+  - Power usage condition 
+  - Meter reset action 
+* **Stable energy readings**: Monotonic kWh values prevent false drops in energy graphs
+* **Backwards compatibility**: Deprecated flow cards maintained for existing flows
+
 ## Version log
 * 1.0.0 - Initial version - support for Door/window sensor
 * 1.0.1 - Added Plug-in Switch (Schuko) TZWP-100. Bugfix.
@@ -26,3 +34,4 @@
 * 1.3.2 - Device name fixed
 * 1.3.3 - Added measure battery capability for Door/window sensor TZDW-100
 * 1.4.0 - Added new device, Pet Immune PIR sensor, and updated app profile
+* 1.5.0 - Added current measurement (A) for TZWP-102, improved flow cards with app-level compatibility, enhanced power meter stability with monotonic kWh values, and added deprecated tag to device level flow cards for backwards compatibility
