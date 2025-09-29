@@ -116,7 +116,6 @@
       },
       {
         "id": "TZWP-102_current_power",
-        "deprecated": true,
         "title": {
           "en": "The current power usage is",
           "no": "Nåværende effektforbruk er"
@@ -181,7 +180,6 @@
       },
       {
         "id": "TZWP-102_reset_meter",
-        "deprecated": true,
         "title": {
           "en": "Reset meter values",
           "no": "Nullstil målerdata"
