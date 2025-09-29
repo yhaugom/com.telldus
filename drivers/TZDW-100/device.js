@@ -11,7 +11,11 @@ class TelldusDoorWindowSensor extends ZwaveDevice {
 		// register the `measure_battery` capability with COMMAND_CLASS_BATTERY and with the
 		// default system capability handler (see: lib/zwave/system/capabilities)
  		
- 		this.registerCapability('measure_battery', 'BATTERY');
+ 		this.registerCapability('measure_battery', 'BATTERY', {
+			getOpts: {
+				getOnOnline: true 
+			}
+		});
  		
 		this.registerCapability('alarm_contact', 'SENSOR_BINARY', {
 			getOpts: {

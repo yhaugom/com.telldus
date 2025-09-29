@@ -78,7 +78,7 @@ class TelldusTZWP102 extends ZwaveDevice {
 					const margin = args.watt * args.errormargin / 100;
 					return (power >= args.watt - margin) && (power < args.watt + margin);
 				} catch (error) {
-					this.error('Error in TZWP-102_current_power condition (deprecated):', error);
+					this.error('Error in TZWP-102_current_power condition:', error);
 					return false;
 				}
 			});

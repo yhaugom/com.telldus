@@ -9,7 +9,11 @@ class TelldusDoorWindowSensor15110 extends ZwaveDevice {
 		// register device capabilities
 		this.registerCapability('alarm_contact', 'NOTIFICATION');
 		this.registerCapability('alarm_tamper', 'NOTIFICATION');
-		this.registerCapability('measure_battery', 'BATTERY');
+		this.registerCapability('measure_battery', 'BATTERY', {
+			getOpts: {
+				getOnOnline: true 
+			}
+		});
 	}
 
 }
