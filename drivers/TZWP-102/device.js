@@ -54,7 +54,7 @@ class TelldusTZWP102 extends ZwaveDevice {
 
 		// Add measure_current capability if it doesn't exist on the device
 		if (!this.hasCapability('measure_current')) {
-			await this.addCapability('measure_current');
+			await this.addCapability('measure_current').catch(this.error);
 		}
 
 		// Optional: current in A (Scale = 5 → Scale bit 2 = true, Scale bits 10 = 1)
@@ -90,7 +90,7 @@ class TelldusTZWP102 extends ZwaveDevice {
 				if (this.node && this.node.CommandClass.COMMAND_CLASS_METER) 
 				{
 					this.log('Maintenance button METER_RESET pushed.');
-					return await this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({});
+					return await this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({}).catch(this.error);
 
 				}
 				this.log('Does not support meter resets, or not a valid node.');
@@ -105,7 +105,7 @@ class TelldusTZWP102 extends ZwaveDevice {
 				if (this.node && this.node.CommandClass.COMMAND_CLASS_METER) 
 				{
 					this.log('Action card METER_RESET triggered (for backwards compatibility)');
-					return await this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({});				
+					return await this.node.CommandClass.COMMAND_CLASS_METER.METER_RESET({}).catch(this.error);				
 				}
 				this.log('Does not support meter resets, or not a valid node.');
 				return Promise.reject('The device could not be reset');
