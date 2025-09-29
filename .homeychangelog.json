@@ -61,5 +61,8 @@
   },
   "1.5.1": {
     "en": "Added Current (A) insight for live amperage. Energy (kWh) is now strictly cumulative; no more drops except after a real reset. Improved meter report handling for more stable and accurate readings. No action needed: existing devices get Current (A) automatically after app restart."
+  },
+  "1.5.2": {
+    "en": "Added Current (A) insight for live amperage. Energy (kWh) is now strictly cumulative; no more drops except after a real reset. Improved meter report handling for more stable and accurate readings. No action needed: existing devices get Current (A) automatically after app restart."
   }
 }
