@@ -30,6 +30,6 @@
   },
   "homepage": "https://github.com/yhaugom/com.telldus#readme",
   "devDependencies": {
-    "homey": "^3.9.4"
+    "homey": "^3.12.2"
   }
 }
