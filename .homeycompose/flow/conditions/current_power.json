@@ -5,14 +5,14 @@
     "no": "Nåværende effektforbruk er"
   },
   "titleFormatted": {
-    "en": "The current power usage of [[device]] is [[watt]]W with errormargin [[errormargin]]%",
-    "no": "Nåværende effektforbruk for [[device]] er [[watt]]W med feilmargin på [[errormargin]]%"
+    "en": "The current power usage is [[watt]]W with errormargin [[errormargin]]%",
+    "no": "Nåværende effektforbruk er [[watt]]W med feilmargin på [[errormargin]]%"
   },
   "args": [
     {
       "type": "device",
       "name": "device",
-      "filter": "capabilities=measure_power"
+      "filter": "capabilities=measure_power&driver_id=TZWP-102"
     },
     {
       "name": "watt",
