@@ -5,8 +5,8 @@
     "no": "Nullstil målerdata"
   },
   "titleFormatted": {
-    "en": "Reset meter values for [[device]]",
-    "no": "Nullstil målerdata for [[device]]"
+    "en": "Reset meter values",
+    "no": "Nullstil målerdata"
   },
   "hint": {
     "en": "Reset the accumulated power usage (kWh). Can not be reversed.",
@@ -16,7 +16,7 @@
     {
       "type": "device",
       "name": "device",
-      "filter": "capabilities=meter_power"
+      "filter": "capabilities=meter_power&driver_id=TZWP-102"
     }
   ]
 }
